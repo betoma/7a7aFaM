@@ -15,6 +15,9 @@
 \usepackage{expex}
 \usepackage[calc,english]{datetime2}
 
+%-----CONFIGURATION------
+%------------------------
+
 \setmainfont{Charis SIL}[CharacterVariant=43:1]
 \restylefloat{table}
 
@@ -34,10 +37,16 @@
 
 \DTMsetdatestyle{eurodate}
 
+\renewcommand{\arraystretch}{1.4}
+
 %-------COMMANDS---------
 %------------------------
 
-\newcommand{\lang}{7a7aFaM}
+\newcommand{\lang}{ʔaʔaFaM}
+\newcommand{\longv}{ː}
+\newcommand{\sqbrack}[1]{$\langle$#1$\rangle$}
+\newcommand{\ttilde}{\raise.17ex\hbox{$\scriptstyle\sim$}}
+\newcommand{\rootpart}{$\Theta$}
 
 %-------TITLE PAGE-------
 %------------------------
@@ -59,6 +68,10 @@
 
 \chapter{Foreword}
 
+\lang{} is a constructed language.
+
+\newpage
+
 \tableofcontents
 
 \mainmatter
@@ -67,15 +80,126 @@
 
 \chapter{Phonology}
 \section{Consonants}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{rcccccc}
+    \toprule
+            & Labial & Alveolar & Palatal & Velar & Uvular & Glottal \\
+    \midrule
+    Plosive & p \ttilde{} b & t \ttilde{} d & \multirow{2}{*}{c \ttilde{} \t{cç}} & \multirow{2}{*}{k \ttilde{} \t{kx}} & \multirow{2}{*}{q \ttilde{} \t{qχ}} & ʔ \\
+    Affricate & pʰ \ttilde{} \t{pɸ} & tʰ \ttilde{} \t{ts} & & & & \\
+    Fricative & ɸ & s & & \multicolumn{3}{c}{x \hspace{1ex} \ttilde{} \hspace{1ex} χ \hspace{1ex} \ttilde{} \hspace{1ex} ħ \hspace{1ex} \ttilde{} \hspace{1ex} h} \\
+    Approximant & & l & j & w & & \\
+    Nasal & m & n & & & & \\
+    Rhotic & & \multicolumn{4}{c}{r} & \\
+    \bottomrule
+    \end{tabular}
+    \caption{Phonemic Consonant Inventory}
+    \label{tab:consinv}
+\end{table}
+
 \section{Vowels}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{rccc}
+    \toprule
+          & Front & Central & Back \\
+    \midrule
+    Close & i (i\longv{}) & & u (u\longv) \\
+    Mid   & & ə & \\
+    Open  & & a (a\longv) & \\
+    \bottomrule
+    \end{tabular}
+    \caption{Phonemic Vowel Inventory}
+    \label{tab:vowelinv}
+\end{table}
+
+\subsection{Epenthetic schwa}
+
 \section{Morphophonemics}
 
 \chapter{Morphology}
 \section{Underlying roots}
 \section{Derivational morphology}
+
+The root system
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{llll}
+    \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
+    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& saj & sleep \emph{(cf. isaaj `to sleep')}\\
+    & & kal & rainfall \emph{(cf. kurli `raindrop')}\\
+    {\rootpart}ana{\rootpart} & Person of X, Agentive noun & kanaj & author \emph{(cf. kiij `to write X')}\\
+    {\rootpart}ar{\rootpart}i & Liquid noun & qarfi & coffee \emph{(cf. iqaaf `to make coffee')} \\
+    CurCi & Object noun & nurmi & food \emph{(cf. niim `to cook X')}\\
+    CidiC & Loose granular mass & widiw & sugar \emph{(cf. wawa `sweet')} \\
+    CasiC & Long slender object & basit & hair \emph{(cf. bulit `head')} \\
+    CuliC & Associated body part & bulit & head \emph{(cf. ibaat `to understand')}\\
+    mCiC & Instrument, tool & mriq & weapon \emph{(cf. raq `pain')} \\
+    iCuCa & Place of X/with X attribute & ihuta & night \emph{(cf. hata `dark')} \\
+    CiiC & Transitive verb & fiis & to give birth to \emph{(cf. fanas `person')} \\
+    iCaaC & Intransitive verb & iʔaaʔ & to act stupidly \emph{(cf. eʔaʔa `dumb')} \\
+    CaCa & Primary attribute & safra & hot \emph{(cf. safer `heat')} \\
+    CuCu & Animal & burku & dog \emph{(cf. bark `bark')} \\
+    CuuC & Country & fuuns & France \emph{(cf. funsu `frog')}
+    
+    \end{tabular}
+    \caption{Primary derivation patterns}
+    \label{tab:primedevs}
+\end{table}
+
 \section{Inflectional morphology}
+\section{Pronouns and determiners}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{rll}
+        & \textit{Nonplural} & \textit{Plural} \\
+    \textit{Speaker-only} & nas & naswi \\
+    \textit{Speaker and Addressee} & nemi & nemiwi \\
+    \textit{Addressee-only} & mi & miwi \\
+    \end{tabular}
+    \caption{Discourse participant pronouns}
+    \label{tab:firstandsecond}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{>{\em}rll}
+        & \textit{Determiner} & \textit{Pronoun}  \\
+    Proximal & wa & wase \\
+    Medial & par & parse \\
+    Distal & bu & buse \\
+    Interrogative & li & lise \\
+    \end{tabular}
+    \caption{Determiners and demonstrative pronouns}
+    \label{tab:determiners}
+\end{table}
 
 \chapter{Syntax}
+
+\section{Animacy hierarchy}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ll}
+    0 & Natural Forces \\
+    1 & Pronouns (1>2>3) \\
+    2 & Speakers of \lang{} \\
+    3 & Non-speakers of \lang{} \\
+    4 & Higher-order animals (mammals, octopus, intelligent creatures) \\
+    5 & \parbox[t]{7cm}{Body parts, tools, any inanimate object used for acting upon something} \\
+    6 & Lower-order animals \\
+    7 & Plants \\
+    8 & Inanimate objects \\
+    9 & Abstract concepts 
+    \end{tabular}
+    \caption{Animacy hierarchy in nominals}
+    \label{tab:hierarchy}
+\end{table}
 
 \chapter{Semantics and pragmatics}
 \section{Phatic expressions}
