@@ -1,19 +1,38 @@
-\documentclass[10pt]{extbook}
+\documentclass[a4paper,10pt,twoside,openright,draft]{memoir}
 \usepackage{multicol, multirow, array}
-\usepackage{fontspec, extsizes}
+\usepackage{fontspec}
 \usepackage{anyfontsize}
 \usepackage[pagecolor=none,dvipsnames]{xcolor}
 \usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
 \usepackage[margin=0.8in]{geometry}
 \usepackage{float, hhline}
-\usepackage{tocbibind}
+\usepackage{booktabs}
+\usepackage{textcomp}
 \usepackage{expex}
+\usepackage[calc,english]{datetime2}
 
-\setmainfont{Charis SIL}
+\setmainfont{Charis SIL}[CharacterVariant=43:1]
 \restylefloat{table}
 
-\setcounter{secnumdepth}{5}
-\setcounter{tocdepth}{5}
+\setsecnumdepth{subsubsection}
+\settocdepth{subsubsection}
+
+\lingset{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex}
+
+\DTMnewdatestyle{eurodate}{%
+    \renewcommand{\DTMdisplaydate}[4]{%
+        \number##3.\nobreakspace%           day
+        \DTMmonthname{##2}\nobreakspace%    month
+        \number##1%                         year
+    }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMsetdatestyle{eurodate}
 
 \title{7a7aFaM \\ A prescriptive grammar}
 \author{Bethany E. Toma, Knut F. K. Ulstrup}
