@@ -42,11 +42,15 @@
 %-------COMMANDS---------
 %------------------------
 
-\newcommand{\lang}{ʔaʔaFaM}
+\newcommand{\lang}{ɁaɁa\textsc{F}a\textsc{M}}
 \newcommand{\longv}{ː}
 \newcommand{\sqbrack}[1]{$\langle$#1$\rangle$}
 \newcommand{\ttilde}{\raise.17ex\hbox{$\scriptstyle\sim$}}
 \newcommand{\rootpart}{$\Theta$}
+\newcommand{\bigglot}{Ɂ}
+\newcommand{\lilglot}{ɂ}
+\newcommand{\nm}{\symbol{"2205}}
+\newcommand{\tiebar}{͡}
 
 %-------TITLE PAGE-------
 %------------------------
@@ -87,12 +91,12 @@
     \toprule
             & Labial & Alveolar & Palatal & Velar & Uvular & Glottal \\
     \midrule
-    Plosive & p \ttilde{} b & t \ttilde{} d & \multirow{2}{*}{c \ttilde{} \t{cç}} & \multirow{2}{*}{k \ttilde{} \t{kx}} & \multirow{2}{*}{q \ttilde{} \t{qχ}} & ʔ \\
-    Affricate & pʰ \ttilde{} \t{pɸ} & tʰ \ttilde{} \t{ts} & & & & \\
-    Fricative & ɸ & s & & \multicolumn{3}{c}{x \hspace{1ex} \ttilde{} \hspace{1ex} χ \hspace{1ex} \ttilde{} \hspace{1ex} ħ \hspace{1ex} \ttilde{} \hspace{1ex} h} \\
+    Plosive & p \ttilde{} b & t \ttilde{} d & \multirow{2}{*}{c \ttilde{} c\tiebar ç} & \multirow{2}{*}{k \ttilde{} k\tiebar x} & \multirow{2}{*}{q \ttilde{} q\tiebar χ} & \multirow{2}{*}{ʔ} \\
+    Affricate & pʰ \ttilde{} p\tiebar ɸ & tʰ \ttilde{} t\tiebar s & & & & \\
+    Fricative & ɸ & s & \multicolumn{4}{c}{ç \enspace \ttilde{} \enspace x \enspace \ttilde{} \enspace χ \enspace \ttilde{} \enspace ħ \enspace \ttilde{} \enspace h} \\
     Approximant & & l & j & w & & \\
     Nasal & m & n & & & & \\
-    Rhotic & & \multicolumn{4}{c}{r} & \\
+    Rhotic & & \multicolumn{4}{c}{ɾ \enspace \ttilde{} \enspace r \enspace \ttilde{} \enspace ɹ \enspace \ttilde{} \enspace ɽ \enspace \ttilde{} \enspace ɻ \enspace \ttilde{} \enspace ʀ \enspace \ttilde{} \enspace ʁ } & \\
     \bottomrule
     \end{tabular}
     \caption{Phonemic Consonant Inventory}
@@ -130,21 +134,21 @@ The root system
     \centering
     \begin{tabular}{llll}
     \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
-    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& saj & sleep \emph{(cf. isaaj `to sleep')}\\
-    & & kal & rainfall \emph{(cf. kurli `raindrop')}\\
-    {\rootpart}ana{\rootpart} & Person of X, Agentive noun & kanaj & author \emph{(cf. kiij `to write X')}\\
-    {\rootpart}ar{\rootpart}i & Liquid noun & qarfi & coffee \emph{(cf. iqaaf `to make coffee')} \\
-    CurCi & Object noun & nurmi & food \emph{(cf. niim `to cook X')}\\
-    CidiC & Loose granular mass & widiw & sugar \emph{(cf. wawa `sweet')} \\
-    CasiC & Long slender object & basit & hair \emph{(cf. bulit `head')} \\
-    CuliC & Associated body part & bulit & head \emph{(cf. ibaat `to understand')}\\
-    mCiC & Instrument, tool & mriq & weapon \emph{(cf. raq `pain')} \\
-    iCuCa & Place of X/with X attribute & ihuta & night \emph{(cf. hata `dark')} \\
-    CiiC & Transitive verb & fiis & to give birth to \emph{(cf. fanas `person')} \\
-    iCaaC & Intransitive verb & iʔaaʔ & to act stupidly \emph{(cf. eʔaʔa `dumb')} \\
-    CaCa & Primary attribute & safra & hot \emph{(cf. safer `heat')} \\
-    CuCu & Animal & burku & dog \emph{(cf. bark `bark')} \\
-    CuuC & Country & fuuns & France \emph{(cf. funsu `frog')}
+    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& \textsc{s}a\textsc{j} & sleep \emph{(cf. i\textsc{s}aa\textsc{j} `to sleep')}\\
+    & & \textsc{k}a\textsc{l} & rainfall \emph{(cf. \textsc{k}ur\textsc{l}i `raindrop')}\\
+    {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \textsc{k}ana\textsc{j} & author \emph{(cf. \textsc{k}ii\textsc{j} `to write X')}\\
+    {\rootpart}ar{\rootpart}i & Liquid noun & \textsc{q}ar\textsc{f}i & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
+    {\rootpart}ur{\rootpart}i & Object noun & \textsc{n}ur\textsc{m}i & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
+    {\rootpart}idi{\rootpart} & Loose granular mass & \textsc{w}idi\textsc{w} & sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')} \\
+    {\rootpart}asi{\rootpart} & Long slender object & \textsc{b}asi\textsc{t} & hair \emph{(cf. \textsc{b}uli\textsc{t} `head')} \\
+    {\rootpart}uli{\rootpart} & Associated body part & \textsc{b}uli\textsc{t} & head \emph{(cf. i\textsc{b}aa\textsc{t} `to understand')}\\
+    m{\rootpart}i{\rootpart} & Instrument, tool & m\textsc{r}i\textsc{q} & weapon \emph{(cf. \textsc{r}a\textsc{q} `pain')} \\
+    i{\rootpart}u{\rootpart}a & Place of X/with X attribute & i\textsc{h}u\textsc{t}a & night \emph{(cf. \textsc{h}a\textsc{t}a `dark')} \\
+    {\rootpart}ii{\rootpart} & Transitive verb & \textsc{f}ii\textsc{s} & to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')} \\
+    i{\rootpart}aa{\rootpart} & Intransitive verb & i\bigglot aa\bigglot & to act stupidly \emph{(cf. e\bigglot a\bigglot a `dumb')} \\
+    {\rootpart}a{\rootpart}a & Primary attribute & \textsc{s}a\textsc{fr}a & hot \emph{(cf. \textsc{s}a\textsc{f}e\textsc{r} `heat')} \\
+    {\rootpart}u{\rootpart}u & Animal & \textsc{b}u\textsc{rk}u & dog \emph{(cf. \textsc{b}a\textsc{rk} `bark')} \\
+    {\rootpart}uu{\rootpart} & Country & \textsc{f}uu\textsc{ns} & France \emph{(cf. \textsc{f}u\textsc{ns}u `frog')}
     
     \end{tabular}
     \caption{Primary derivation patterns}
