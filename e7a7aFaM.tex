@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt,twoside,openright,draft]{memoir}
+\documentclass[a4paper,10pt,twoside,openright]{memoir}
 \usepackage{multicol, multirow, array}
 \usepackage{fontspec}
 \usepackage{anyfontsize}
@@ -196,8 +196,8 @@ Certain lexical items may be inflected to convey the gender of its referent. On 
     \begin{tabular}{rll}
         & \textit{Nonplural} & \textit{Plural} \\
     \textit{Speaker-only} & nas & naswi \\
-    \textit{Speaker and Addressee} & nemi & nemiwi \\
     \textit{Addressee-only} & mi & miwi \\
+    \textit{Inclusive} & nemi & nemiwi \\
     \end{tabular}
     \caption{Discourse participant pronouns}
     \label{tab:firstandsecond}
@@ -227,10 +227,10 @@ from-comparative, marks standard (to which is compared)
 \pex[interpartskip=3ex]
 \a
 \begingl
-pumu[rabbit]
-fanas[person]
+\textsc{p}u\textsc{m}u[rabbit]
+\textsc{f}ana\textsc{s}[person]
 fun[from]
-manta[big]
+\textsc{m}a\textsc{nt}a[big]
 -uru[\textsc{cop}]
 \glft `The rabbit was bigger than a person.'
 \endgl
@@ -270,8 +270,29 @@ fun[\textsc{mrk}/from]
 \section{Phatic expressions}
 \section{Idiomatic expressions}
 
-cumpu cumpuuru = no shit
+\textsc{c}u\textsc{mp}u \textsc{c}u\textsc{mp}uuru = no shit
 
 \part{Dictionary}
+
+\setsecnumdepth{chapter}
+\settocdepth{section}
+
+\begin{multicols}{2}
+%
+\section{Rootless Words}
+\begin{description}
+    \item[test] This is an entry
+\end{description}
+
+\section{\textsc{b---t}}
+
+
+
+\end{multicols}
+
+\part{Example Texts \& Translations}
+
+\setsecnumdepth{subsubsection}
+\settocdepth{subsubsection}
 
 \end{document}
