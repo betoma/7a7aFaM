@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{textcomp}
 \usepackage{expex}
+\usepackage{enumitem}
 \usepackage[calc,english]{datetime2}
 
 %-----CONFIGURATION------
@@ -148,7 +149,7 @@ The informal writing conventions, also known as ``texting script", is the orthog
 \section{Underlying roots}
 \section{Derivational morphology}
 
-\lang{} allows for words to be altered syntactically and semantically using a rich set of morphological operations, divided into two categories based on their concatenativity. 
+\lang{} allows for words to be altered syntactically and semantically using a rich set of morphological operations, divided into two categories based on their concatenation. 
 
 \subsection{Primary derivation}
 
@@ -227,6 +228,7 @@ Certain lexical items may be inflected to convey the gender of its referent. On 
     Medial & par & parse \\
     Distal & bu & buse \\
     Interrogative & li & lise \\
+    Relative & kun & kunse 
     \end{tabular}
     \caption{Determiners and demonstrative pronouns}
     \label{tab:determiners}
@@ -307,7 +309,7 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \chapter{Roots and Derived Words}
 \begin{multicols*}{2}
 \section{\textsc{b---t}}
-\begin{description}
+\begin{description}[leftmargin=*]
     \newentry{\textsc{b}ii\textsc{t}}{v.tr.}
     \begin{enumerate}
         \item to know \textit{smth.}, to understand \textit{smth.}
@@ -334,13 +336,15 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \end{description}
 
 \section{\textsc{k---l}}
-\begin{description}
-    \newentry{\famword{a}{k}{i}{l}{u}}{n.}\\
-        container of water to be drunk from, glass, cup, water bottle
+\begin{description}[leftmargin=*]
+    \newentry{\famword{a}{k}{i}{l}{u}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] container of water to be drunk from, glass, cup, water bottle
         \begin{quote}
-            ha mark \textsc{k}a\textsc{j} men a\textsc{k}i\textsc{l}uila\\
+            ha \textsc{mark} \textsc{k}a\textsc{j} men a\textsc{k}i\textsc{l}uila\\
             \textit{`Mark owned five water bottles.'}
         \end{quote}
+    \end{description}
     \newentry{\famword{i}{k}{aa}{l}{}}{v.intr.}
     \begin{enumerate}
         \item \textit{(impersonal)} to be a rainy day
@@ -350,33 +354,39 @@ The obligatory gender marking is a means of expressing your gender identity in a
         \end{quote}
         \item \textit{(impersonal)} to be raining
         \begin{quote}
-            i\textsc{m}u\textsc{nt}a el nas i\textsc{y}aa\textsc{t}e\lilglot{} kaj da buse te i\textsc{k}aa\textsc{l}\\
+            i\textsc{m}u\textsc{nt}a daw nas i\textsc{y}aa\textsc{t}e\lilglot{} kaj da buse fit i\textsc{k}aa\textsc{l}\\
             \textit{`I wanted to go to the mountains, but it's raining there.'}
         \end{quote}
     \end{enumerate}
-    \newentry{\famword{}{k}{aju}{l}{a}}{n.}\\
-        water surface
+    \newentry{\famword{}{k}{aju}{l}{a}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] water surface
         \begin{quote}
             naswi \textsc{k}aju\textsc{l}a tui \textsc{f}ii\textsc{l}ami\lilglot{} dak\\
             \textit{`we could see ourselves in the water surface.'}
         \end{quote}
-    \newentry{\famword{}{k}{a}{l}{}}{n.}\\
-        humidity, wetness, dampness
+    \end{description}
+    \newentry{\famword{}{k}{a}{l}{}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] humidity, wetness, dampness
         \begin{quote}
             nas wan i\textsc{f}u\textsc{s}a \textsc{k}a\textsc{l}ila\\
-            \textit{`my shoes are damp from the rain.'}
+            \textit{`My house is damp.'}
         \end{quote}
+    \end{description}
     \newentry{\famword{}{k}{a}{l}{a}}{adj.} 
     \begin{enumerate}
         \item covered in water, saturated with water, wet, soaked
         \item fluid, liquid
     \end{enumerate}
-    \newentry{\famword{}{k}{ar}{l}{i}}{n.}\\
-        water served as a beverage, water not part of a body of water or stream
+    \newentry{\famword{}{k}{ar}{l}{i}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] water served as a beverage, water not part of a body of water or stream
         \begin{quote}
             mi \textsc{n}ar\textsc{k}a \textsc{k}ar\textsc{l}iilali?\\
             \textit{`do you have any cold water?'}
         \end{quote}
+    \end{description}
     \item[\textsc{k}asi\textsc{l}] $\bullet$ \textit{n.}\hfill
         \begin{enumerate}
             \item river, stream
@@ -388,11 +398,15 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \chapter{Rootless Words}
 \begin{multicols*}{2}
 \section{Auxiliary Verbs}
-\begin{description}
-    \newentry{hwii}{aux.}\\
-    not, no, don't, never
-    \newentry{kaj}{aux.}\\
-    to want to, to be going to 
+\begin{description}[leftmargin=*]
+    \newentry{hwii}{aux.}
+    \begin{description}[labelwidth=*]
+    \item[] not, no, don't, never
+    \end{description}
+    \newentry{kaj}{aux.}
+    \begin{description}[labelwidth=*]
+    \item[] to want to, to be going to 
+    \end{description}
 \end{description}
 \end{multicols*}
 
