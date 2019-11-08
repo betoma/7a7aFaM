@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{textcomp}
 \usepackage{expex}
+\usepackage{enumitem}
 \usepackage[calc,english]{datetime2}
 
 %-----CONFIGURATION------
@@ -148,7 +149,7 @@ The informal writing conventions, also known as ``texting script", is the orthog
 \section{Underlying roots}
 \section{Derivational morphology}
 
-\lang{} allows for words to be altered syntactically and semantically using a rich set of morphological operations, divided into two categories based on their concatenativity. 
+\lang{} allows for words to be altered syntactically and semantically using a rich set of morphological operations, divided into two categories based on their concatenation. 
 
 \subsection{Primary derivation}
 
@@ -158,8 +159,8 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
     \centering
     \begin{tabular}{llll}
     \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
-    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& \famword{}{s}{a}{j}{} & sleep \emph{(cf. i\textsc{s}aa\textsc{j} `to sleep')}\\
-    & & \famword{}{k}{a}{l}{} & rainfall \emph{(cf. \textsc{k}ur\textsc{l}i `raindrop')}\\
+    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& \famword{}{s}{a}{j}{} & sleep \emph{(cf. \famword{i}{s}{aa}{j}{} `to sleep')}\\
+    & & \famword{}{k}{a}{l}{} & rainfall \emph{(cf. \famword{}{k}{ur}{l}{i} `raindrop')}\\
     {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{j} `to write X')}\\
     {\rootpart}ar{\rootpart}i & Liquid noun & \famword{}{q}{ar}{f}{i} & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
     {\rootpart}ur{\rootpart}i & Object noun & \famword{}{n}{ur}{m}{i} & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
@@ -227,6 +228,7 @@ Certain lexical items may be inflected to convey the gender of its referent. On 
     Medial & par & parse \\
     Distal & bu & buse \\
     Interrogative & li & lise \\
+    Relative & kun & kunse 
     \end{tabular}
     \caption{Determiners and demonstrative pronouns}
     \label{tab:determiners}
@@ -361,7 +363,7 @@ fun[\textsc{mrk}/from]
 
 Phatic expressions in \lang{} are all in some way related to the nouns they are derived from, suggesting an emphasis on acknowledging the addressee's current or upcoming actions. The addressee may respond with the same expression back, even if it does not apply to the original speaker in any way, or respond in kind with a more suitable expression.
 
-The obligatory gender marking is a means of expressing your gender identity in an unintrusive manner.\footnote{The real reason is that as Beth once ended a conversation with "sayonara", Knut noticed some coincidental similarities with the word \textsc{s}a\textsc{j} `sleep' and the affix -un to indicate feminine gender, with the -ara reanalyzed as a phatic/optative marker of sorts.}
+The obligatory gender marking is a means of expressing your gender identity in an unintrusive manner.\footnote{The real reason is that as Beth once ended a conversation with "sayonara", Knut noticed some coincidental similarities with the word \famword{}{s}{a}{j}{} `sleep' and the affix -un to indicate feminine gender, with the -ara reanalyzed as a phatic/optative marker of sorts.}
 
 \subparagraph{\famword{}{f}{a}{s}{anara}} \textit{(from \famword{}{f}{a}{s}{} `life')} is a catch-all greeting, suitable for any time of day. 
 
@@ -369,7 +371,7 @@ The obligatory gender marking is a means of expressing your gender identity in a
 
 \section{Idiomatic expressions}
 
-\textsc{c}u\textsc{mp}u \textsc{c}u\textsc{mp}uuru = no shit, preaching to the choir
+\famword{}{c}{u}{mp}{u} \famword{}{c}{u}{mp}{uuru} = no shit, preaching to the choir
 
 \part{Dictionary}
 
@@ -381,7 +383,7 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \chapter{Roots and Derived Words}
 \begin{multicols*}{2}
 \section{\textsc{b---t}}
-\begin{description}
+\begin{description}[leftmargin=*]
     \newentry{\textsc{b}ii\textsc{t}}{v.tr.}
     \begin{enumerate}
         \item to know \textit{smth.}, to understand \textit{smth.}
@@ -408,50 +410,58 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \end{description}
 
 \section{\textsc{k---l}}
-\begin{description}
-    \newentry{\famword{a}{k}{i}{l}{u}}{n.}\\
-        container of water to be drunk from, glass, cup, water bottle
+\begin{description}[leftmargin=*]
+    \newentry{\famword{a}{k}{i}{l}{u}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] container of water to be drunk from, glass, cup, water bottle
         \begin{quote}
-            ha mark \textsc{k}a\textsc{j} men a\textsc{k}i\textsc{l}uila\\
+            \textsc{mark} se \famword{}{k}{a}{j}{} men \famword{a}{k}{i}{l}{uila}\\
             \textit{`Mark owned five water bottles.'}
         \end{quote}
+    \end{description}
     \newentry{\famword{i}{k}{aa}{l}{}}{v.intr.}
     \begin{enumerate}
         \item \textit{(impersonal)} to be a rainy day
         \begin{quote}
-            waj\textsc{h}u\textsc{j}a i\textsc{k}aa\textsc{l}\\
+            \famword{waj}{h}{u}{j}{a} \famword{i}{k}{aa}{l}{}\\
             \textit{`Today's a rainy day.'}
         \end{quote}
         \item \textit{(impersonal)} to be raining
         \begin{quote}
-            i\textsc{m}u\textsc{nt}a el nas i\textsc{y}aa\textsc{t}e\lilglot{} kaj da buse te i\textsc{k}aa\textsc{l}\\
+            \famword{i}{m}{u}{nt}{a} daw nas \famword{i}{j}{aa}{t}{e\lilglot} kaj da buse fit \famword{i}{k}{aa}{l}{}\\
             \textit{`I wanted to go to the mountains, but it's raining there.'}
         \end{quote}
     \end{enumerate}
-    \newentry{\famword{}{k}{aju}{l}{a}}{n.}\\
-        water surface
+    \newentry{\famword{}{k}{aju}{l}{a}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] water surface
         \begin{quote}
-            naswi \textsc{k}aju\textsc{l}a tui \textsc{f}ii\textsc{l}ami\lilglot{} dak\\
-            \textit{`we could see ourselves in the water surface.'}
+            naswi \famword{}{k}{aju}{l}{a} tui \famword{}{f}{ii}{l}{ami\lilglot} dak\\
+            \textit{`We could see ourselves on the water's surface.'}
         \end{quote}
-    \newentry{\famword{}{k}{a}{l}{}}{n.}\\
-        humidity, wetness, dampness
+    \end{description}
+    \newentry{\famword{}{k}{a}{l}{}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] humidity, wetness, dampness
         \begin{quote}
-            nas wan i\textsc{f}u\textsc{s}a \textsc{k}a\textsc{l}ila\\
-            \textit{`my shoes are damp from the rain.'}
+            nas wan \famword{i}{f}{u}{s}{a} \famword{}{k}{a}{l}{ila}\\
+            \textit{`My house is damp.'}
         \end{quote}
+    \end{description}
     \newentry{\famword{}{k}{a}{l}{a}}{adj.} 
     \begin{enumerate}
         \item covered in water, saturated with water, wet, soaked
         \item fluid, liquid
     \end{enumerate}
-    \newentry{\famword{}{k}{ar}{l}{i}}{n.}\\
-        water served as a beverage, water not part of a body of water or stream
+    \newentry{\famword{}{k}{ar}{l}{i}}{n.}
+    \begin{description}[labelwidth=*]
+        \item[] water served as a beverage, water not part of a body of water or stream
         \begin{quote}
-            mi \textsc{n}ar\textsc{k}a \textsc{k}ar\textsc{l}iilali?\\
-            \textit{`do you have any cold water?'}
+            mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
+            \textit{`Do you have any cold water?'}
         \end{quote}
-    \item[\textsc{k}asi\textsc{l}] $\bullet$ \textit{n.}\hfill
+    \end{description}
+    \newentry{\famword{}{k}{asi}{l}{}}{n.}
         \begin{enumerate}
             \item river, stream
             \item stream or sprinkle of water
@@ -462,11 +472,15 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \chapter{Rootless Words}
 \begin{multicols*}{2}
 \section{Auxiliary Verbs}
-\begin{description}
-    \newentry{hwii}{aux.}\\
-    not, no, don't, never
-    \newentry{kaj}{aux.}\\
-    to want to, to be going to 
+\begin{description}[leftmargin=*]
+    \newentry{hwii}{aux.}
+    \begin{description}[labelwidth=*]
+    \item[] not, no, don't, never
+    \end{description}
+    \newentry{kaj}{aux.}
+    \begin{description}[labelwidth=*]
+    \item[] to want to, to be going to 
+    \end{description}
 \end{description}
 \end{multicols*}
 
