@@ -377,6 +377,134 @@ fun[\textsc{mrk}/from]
     \label{tab:hierarchy}
 \end{table}
 
+\section{Causative constructions}
+
+\lang{} has several different strategies when it comes to causative constructions, depending on the nature of the predicate in question. Some of these are morphological in nature, while others more periphrastic. 
+
+\subsection{\textit{-ari} for nominal and adjectival predicates}
+
+Simple nominal and adjectival predicates are turned into causatives using the translative suffix \textit{-ari}. If the predicate in question would be expressed with \textit{-uru} in its non-causative form, \textit{-ari} is likely appropriate for the causative.
+
+\pex
+\a
+\begingl
+\famword{}{q}{ar}{f}{i}[coffee]
+\famword{}{s}{a}{fr}{a}-[hot-]@
+uru[\textsc{cop}]
+\glft `The coffee is hot.'
+\endgl
+\a
+\begingl
+\famword{}{q}{ar}{f}{i}[coffee]
+nas[\textsc{1sg}]
+\famword{}{s}{a}{fr}{a}-[hot]@
+ari[\textsc{transl}]
+\glft `I heated up the coffee.'
+\endgl
+\xe
+
+When used with only one argument, verbs ending in \textit{-ari} are assumed to have a null subject and the argument serving as the unaccusative object. This results in \textit{-ari} also serving as `to become' (the reason for its being glossed as `translative') as well as `to cause to be'.
+
+\ex
+\begingl
+\famword{}{q}{ar}{f}{i}[coffee]
+\famword{}{s}{a}{fr}{a}-[hot]@
+ari[\textsc{transl}]
+\glft `The coffee got hot.'
+\endgl
+\xe
+
+\subsection{Valency-increasing verb patterns}
+
+Which pattern is used to form the causative of a predicate depends largely on the nature of the intransitive form of that root. There are two different potentially valency-increasing patterns that can be used for verbs: the {\rootpart}ii{\rootpart} and the aa{\rootpart}i{\rootpart}. The exact effect of each of these valency-increasing operations depends on the individual root; their behavior can differ.
+
+For verbs that would be agentive ambitransitives in English, such as `to eat', generally the behavior is rather straightforward: the {\rootpart}ii{\rootpart} form turns the verb into a straightfoward transitive, and the aa{\rootpart}i{\rootpart} form serves as a causative of the intransitive. 
+
+\pex
+\a
+\begingl
+nas[\textsc{1sg}]
+\famword{i}{n}{aa}{m}{}[eat\textbackslash\textsc{intr}]
+\glft `I was eating.'
+\endgl
+\a
+\begingl
+nas[\textsc{1sg}]
+\famword{}{k}{ur}{k}{i}[cookie]
+\famword{}{n}{ii}{m}{}[eat\textbackslash\textsc{tr}]
+\glft `I ate a cookie.'
+\endgl
+\a
+\begingl
+nas[\textsc{1sg}]
+\famword{in}{m}{i}{m}{}[parent\_child\textbackslash\textsc{dim}]
+\famword{aa}{n}{i}{m}{}[eat\textbackslash\textsc{caus}]
+\glft `I fed my daughter.'
+\endgl
+\xe
+
+It's worth noting that object of the transitive verb cannot be included as the object of the causative verb; the causative verb can still only have two arguments.
+
+\ex
+\ljudge{*}
+\begingl
+nas[\textsc{1sg}]
+\famword{in}{m}{i}{m}{}[parent\_child\textbackslash\textsc{dim}]
+\famword{}{k}{ur}{k}{i}[cookie]
+\famword{aa}{n}{i}{m}{}[eat\textbackslash\textsc{caus}]
+\endgl
+\xe
+
+\noindent To express this notion, a periphrastic causative would be required.
+
+Other types of verbal paradigms make this causative relationship less obvious and use these roots in other ways. For instance, for some roots the intransitive form is unaccusative or passive in nature. In these cases, the transitive form behaves as a causative:
+
+\pex
+\a
+\begingl
+nas[\textsc{1sg}]
+wan[\textsc{poss}]
+\famword{}{m}{ana}{m}{}[parent\_child]
+\famword{i}{n}{aa}{w}{}[death\textbackslash\textsc{intr}]
+\glft `My mother died.'
+\endgl
+\a
+\begingl
+nas[\textsc{1sg}]
+\famword{}{m}{ana}{m}{}[parent\_child]
+\famword{}{n}{ii}{w}{}[death\textbackslash\textsc{tr}]
+\glft `I killed my mother.'
+\endgl
+\xe
+
+For these roots, the aa{\rootpart}i{\rootpart} form means the same thing as the {\rootpart}ii{\rootpart} form, but while the {\rootpart}ii{\rootpart} form implies a successfully completed action, the same implication is not present for the causative form.
+
+\ex
+\begingl
+nas[\textsc{1sg}]
+\famword{}{m}{ana}{m}{}[parent\_child]
+\famword{aa}{n}{i}{w}{}[death\textbackslash\textsc{caus}]
+\glft `I tried to kill my mother' (and she may or may not have died).
+\endgl
+\xe
+
+\noindent For many of these roots, the intransitive is identical in meaning to a `passive' use of the transitive with an omitted subject; whether there is any noticeable difference between these depends on the verb.
+
+\ex
+\begingl
+\famword{}{m}{ana}{m}{}[parent\_child]
+\famword{}{n}{ii}{w}{}[death\textbackslash\textsc{tr}]
+\glft `My mother was killed.'
+\endgl
+\xe
+
+% to-do
+Unergative verbs
+
+\subsection{Periphrastic causatives}
+
+In addition to the morphological causatives above and their aforementioned limitations, \lang{} has a periphrastic causative that can scope over a wider variety of predicates. This periphrasis is expressed through a serial construction using the verb \textit{\textsc{w}\famword{e}{s}{ii}{n}{}} `to effect, to cause' followed by the description of the caused predicate. 
+
 \chapter{Semantics and pragmatics}
 \section{Phatic expressions}
 
@@ -412,7 +540,7 @@ The obligatory gender marking is a means of expressing your gender identity in a
         \end{quote}
         \item to love \textit{sme.} like a brother, to have a close platonic bond with \textit{sme.}, to be best friends with \textit{sme.}
         \begin{quote}
-            nas wan \textsc{J}ana\textsc{B} \textsc{b}ii\textsc{t}ibi\\
+            nas \textsc{J}ana\textsc{B} \textsc{b}ii\textsc{t}ibi\\
             \textit{`I love my friends.'}
         \end{quote}
         \textit{(NB: the subject is reversed from its use as `to understand': \emph{mi nas \textsc{b}ii\textsc{t}ibi} means `you understand me' but `I love you'.)}
@@ -452,29 +580,43 @@ The obligatory gender marking is a means of expressing your gender identity in a
         \end{quote}
     \end{enumerate}
     \newentry{\famword{}{k}{aju}{l}{a}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] water surface
+    \begin{enumerate}
+        \item the surface of a body of water
         \begin{quote}
             naswi \famword{}{k}{aju}{l}{a} tui \famword{}{f}{ii}{l}{ami\lilglot} dak\\
             \textit{`We could see ourselves on the water's surface.'}
         \end{quote}
-    \end{description}
+        \item a puddle
+        \begin{quote}
+            nas \famword{}{k}{aju}{l}{a} daw tui \famword{i}{l}{aa}{s}{}\\
+            \textit{`I stepped in a puddle.'}
+        \end{quote}
+    \end{enumerate}
     \newentry{\famword{}{k}{a}{l}{}}{n.}
     \begin{description}[labelwidth=*]
         \item[] humidity, wetness, dampness
         \begin{quote}
-            nas wan \famword{i}{f}{u}{s}{a} \famword{}{k}{a}{l}{ila}\\
-            \textit{`My house is damp.'}
+            \famword{i}{f}{u}{s}{a} \famword{}{j}{a}{b}{auru}, da \famword{}{l}{aju}{s}{a} \famword{}{k}{a}{l}{ila}\\
+            \textit{`The house is lovely, but the floors are damp.'}
         \end{quote}
     \end{description}
     \newentry{\famword{}{k}{a}{l}{a}}{adj.} 
     \begin{enumerate}
         \item covered in water, saturated with water, wet, soaked
-        \item fluid, liquid
+        \begin{quote}
+            \famword{}{k}{a}{l}{a} \famword{m}{l}{i}{s}{} \famword{}{s}{a}{fr}{aariak}\\
+            \textit{`Warm up your wet shoes.'}
+        \end{quote}
+        \item fluid, liquid, melted
+        \begin{quote}
+            \famword{}{k}{asi}{l}{} \famword{}{k}{a}{l}{a} \famword{}{c}{ur}{kl}{iila}\\
+            \textit{`The river was made of melted chocolate'}
+            %KNUT PLEASE WEIGH IN ON THIS
+        \end{quote}
     \end{enumerate}
     \newentry{\famword{}{k}{ar}{l}{i}}{n.}
     \begin{description}[labelwidth=*]
-        \item[] water served as a beverage, water not part of a body of water or stream
+        \item[] liquid water, fresh water, water not part of a body of water or stream, water served as a beverage
         \begin{quote}
             mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
             \textit{`Do you have any cold water?'}
@@ -483,7 +625,12 @@ The obligatory gender marking is a means of expressing your gender identity in a
     \newentry{\famword{}{k}{asi}{l}{}}{n.}
         \begin{enumerate}
             \item river, stream
-            \item stream or sprinkle of water
+            \item stream or sprinkle of water, as from a faucet or tap
+            \begin{quote}
+                \famword{i}{s}{u}{n}{a} \famword{}{b}{a}{b}{a} \famword{}{k}{asi}{l}{ila}\\
+                \textit{`The shower is low-flow'}\\
+                (lit., \textit{`The shower has a mild stream'})
+            \end{quote}
         \end{enumerate}
 \end{description}
 \end{multicols*}
