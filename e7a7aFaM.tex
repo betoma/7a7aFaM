@@ -15,6 +15,7 @@
 \usepackage{expex}
 \usepackage{enumitem}
 \usepackage[calc,english]{datetime2}
+\usepackage{xifthen}
 
 %-----CONFIGURATION------
 %------------------------
@@ -56,6 +57,36 @@
 \newcommand{\nm}{\symbol{"2205}}
 \newcommand{\tiebar}{͡}
 \newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
+
+%-----DICT COMMANDS------
+%------------------------
+
+\newcounter{definition}
+
+\newenvironment{dictroot}[2]%
+    {%
+    \section{\textsc{#1---#2}}
+    \begin{description}[leftmargin=*]
+    }{%
+    \end{description}
+    }%
+
+\newenvironment{dictentry}[2]%
+    {%
+    \item[#1] $\bullet$ #2\hfill
+    \setcounter{definition}{0}
+    \begin{description}[align=right,labelwidth=*,font=\normalfont]
+    }{%
+    \end{description}
+    }%
+
+\newcommand{\dictdef}[2][]{\refstepcounter{definition}%
+\item[\ifthenelse{\equal{#1}{*}}{}{\thedefinition.}] #2
+}%
+
+\newcommand{\newentry}[2]{%
+\item[#1] $\bullet$ \textit{#2}\hfill
+}%
 
 %-------TITLE PAGE-------
 %------------------------
@@ -279,8 +310,8 @@ Relative clauses are a type of subordinate clauses that describes a referent's s
 \ex
 \begingl
 \famword{}{f}{ana}{s}{}[person]
-\famword{i}{l}{aa}{s}{}[walk]
--tu[\textsc{rel}]
+\famword{i}{l}{aa}{s}{}[walk]@
+-tu[\textsc{-rel}]
 \famword{}{s}{a}{j}{a}uru[sleepy:\textsc{cop}]
 \glft `The person who walked home was sleepy.'
 \endgl
@@ -292,8 +323,8 @@ Clauses with a single argument do not require that the head is marked, as the ar
 \begingl
 \famword{in}{f}{i}{m}{}[children]
 kun[\textsc{rel}]
-\famword{i}{m}{aa}{w}{}[play]
--tu[\textsc{rel}]
+\famword{i}{m}{aa}{w}{}[play]@
+-tu[\textsc{-rel}]
 naswi[\textsc{1p.ex}]
 \famword{}{d}{ii}{l}{}[look]
 \glft `We watched the playtime that the children were having'
@@ -353,8 +384,8 @@ from-comparative, marks standard (to which is compared)
 \famword{}{p}{u}{m}{u}[rabbit]
 \famword{}{f}{ana}{s}{}[person]
 fun[from]
-\famword{}{m}{a}{nt}{a}[big]
--uru[\textsc{cop}]
+\famword{}{m}{a}{nt}{a}[big]@
+-uru[\textsc{-cop}]
 \glft `The rabbit was bigger than a person.'
 \endgl
 \a
@@ -363,8 +394,8 @@ fun[from]
 nemi[\textsc{qual}/\textsc{du.in}]
 buse[\textsc{std}/\textsc{dist:pn}]
 fun[\textsc{mrk}/from]
-\famword{}{j}{a}{l}{}[/many\_things]
--ila[/have]
+\famword{}{j}{a}{l}{}[/many\_things]@
+-ila[-have]
 \glft `We have more time than them.'
 \endgl
 \xe
@@ -401,16 +432,16 @@ Simple nominal and adjectival predicates are turned into causatives using the tr
 \a
 \begingl
 \famword{}{q}{ar}{f}{i}[coffee]
-\famword{}{s}{a}{fr}{a}-[hot-]@
-uru[\textsc{cop}]
+\famword{}{s}{a}{fr}{a}[hot]@
+-uru[\textsc{-cop}]
 \glft `The coffee is hot.'
 \endgl
 \a
 \begingl
 \famword{}{q}{ar}{f}{i}[coffee]
 nas[\textsc{1sg}]
-\famword{}{s}{a}{fr}{a}-[hot]@
-ari[\textsc{transl}]
+\famword{}{s}{a}{fr}{a}[hot]@
+-ari[-\textsc{transl}]
 \glft `I heated up the coffee.'
 \endgl
 \xe
@@ -522,7 +553,7 @@ In addition to the morphological causatives above and their aforementioned limit
 \ex
 \begingl
 nas[\textsc{1sg}]
-\textsc{w}\famword{e}{s}{ii}{n}{}[bring\_about]@
+\textsc{w}\famword{e}{s}{ii}{n}{}[bring\_about]
 ,[]
 \famword{}{q}{ar}{f}{i}[coffee]
 mi[\textsc{2sg}]
@@ -550,39 +581,43 @@ The obligatory gender marking is a means of expressing your gender identity in a
 
 \part{Dictionary}
 
-\newcommand{\newentry}[2]{\item[#1] $\bullet$ \textit{#2}\hfill}
-
 \setsecnumdepth{part}
 \settocdepth{section}
 
 \chapter{Roots and Derived Words}
 \begin{multicols*}{2}
-\section{\textsc{b---t}}
-\begin{description}[leftmargin=*]
-    \newentry{\textsc{b}ii\textsc{t}}{v.tr.}
-    \begin{enumerate}
-        \item to know \textit{smth.}, to understand \textit{smth.}
-        \begin{quote}
-            mi i\textsc{b}aa\textsc{rb}e\lilglot{} kajuc nas \textsc{b}ii\textsc{t}\\
-            \textit{`I know that you want to leave.'}
-        \end{quote}
-        \item to love \textit{sme.} like a brother, to have a close platonic bond with \textit{sme.}, to be best friends with \textit{sme.}
-        \begin{quote}
-            nas \textsc{J}ana\textsc{B} \textsc{b}ii\textsc{t}ibi\\
-            \textit{`I love my friends.'}
-        \end{quote}
-        \textit{(NB: the subject is reversed from its use as `to understand': \emph{mi nas \textsc{b}ii\textsc{t}ibi} means `you understand me' but `I love you'.)}
-    \end{enumerate}
-    \newentry{\famword{i}{b}{aa}{t}{}}{v.intr.}
-    \begin{enumerate}
-        \item to know, to understand, to be in a state of knowing or understanding what is going on
-        \item \textit{(when used reciprocally)} to love each other, to have a close platonic bond, to be the best of friends
-        \begin{quote}
-            nemi i\textsc{b}aa\textsc{t}ami\\
-            \textit{`The two of us are thick as thieves.'}
-        \end{quote}
-    \end{enumerate}
-\end{description}
+
+\begin{dictroot}{b}{t}
+    \begin{dictentry}{\famword{}{b}{ii}{t}{}}{\textit{v.tr.}}
+        \dictdef{%
+            to know \textit{smth.}, to understand \textit{smth.}
+            \begin{quote}
+                mi i\textsc{b}aa\textsc{rb}e\lilglot{} kajuc nas \textsc{b}ii\textsc{t}\\
+                \textit{`I know that you want to leave.'}
+            \end{quote}
+            }
+        \dictdef{%
+        to love \textit{sme.} like a brother, to have a close platonic bond with \textit{sme.}, to be best friends with \textit{sme.}
+            \begin{quote}
+                nas \textsc{J}ana\textsc{B} \textsc{b}ii\textsc{t}ibi\\
+                \textit{`I love my friends.'}
+            \end{quote}
+        \textit{NB: the subject is reversed from its use as `to understand': \emph{mi nas \textsc{b}ii\textsc{t}ibi} means `you understand me' but `I love you'.}
+            }
+    \end{dictentry}
+    \begin{dictentry}{\famword{i}{b}{aa}{t}{}}{\textit{v.intr.}}
+        \dictdef{%
+        to know, to understand, to be in a state of knowing or understanding what is going on
+        }
+        \dictdef{%
+        \textit{(when used reciprocally)} to love each other, to have a close platonic bond, to be the best of friends
+            \begin{quote}
+                nemi i\textsc{b}aa\textsc{t}ami\\
+                \textit{`The two of us are thick as thieves.'}
+            \end{quote}
+        }
+    \end{dictentry}
+\end{dictroot}
 
 \section{\textsc{f---m}}
 \begin{description}[leftmargin=*]
