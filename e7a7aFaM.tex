@@ -15,7 +15,7 @@
 \usepackage{expex}
 \usepackage{enumitem}
 \usepackage[calc,english]{datetime2}
-\usepackage{xifthen}
+\usepackage{suffix}
 
 %-----CONFIGURATION------
 %------------------------
@@ -80,9 +80,13 @@
     \end{description}
     }%
 
-\newcommand{\dictdef}[2][]{\refstepcounter{definition}%
-\item[\ifthenelse{\equal{#1}{*}}{}{\thedefinition.}] #2
+\newcommand{\dictdef}[1]{\refstepcounter{definition}%
+    \item[\thedefinition.] #1
 }%
+
+\WithSuffix\newcommand\dictdef*[1]{%
+    \item[] #1
+}
 
 \newcommand{\newentry}[2]{%
 \item[#1] $\bullet$ \textit{#2}\hfill
@@ -244,6 +248,8 @@ Secondary derivation refers to the exclusively suffixing operations that may be 
 \subsubsection{\emph{-ana} - person}
 
 \subsubsection{\emph{-ari} - `to become', `to cause to be'}
+
+\subsubsection{\emph{-lat} - `measured in', `comprising'}
 
 \subsection{Gender}
 
@@ -630,138 +636,140 @@ The obligatory gender marking is a means of expressing your gender identity in a
     \end{dictentry}
 \end{dictroot}
 
-\section{\textsc{f---m}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{aa}{f}{i}{m}{}}{v.}
-    \begin{description}[labelwidth=*]
-        \item[] to quote \textit{sme.}
-    \end{description}
-    \newentry{\famword{a}{f}{i}{m}{u}}{n.}
-    \begin{enumerate}
-        \item book
-        \item alphabet soup
-    \end{enumerate}
-    \newentry{\famword{}{f}{a}{m}{}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] language, speech, way of speaking
-    \end{description}
-    \newentry{\famword{}{f}{ii}{m}{}}{v.tr.}
-    \begin{description}[labelwidth=*]
-        \item[] to say \textit{smth.}, to speak \textit{smth.}, to tell \textit{smth.}
-    \end{description}
-    \newentry{\famword{i}{f}{aa}{m}{}}{v.intr.}
-    \begin{description}[labelwidth=*]
-        \item[] to talk, to speak, to chatter
-    \end{description}
-    \newentry{\famword{in}{f}{i}{m}{}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] word
-    \end{description}
-    \newentry{\famword{in}{f}{i}{m}{ini}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] letter, character, symbol
-    \end{description}
-    \newentry{\lang{}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] this language, \lang{}
-    \end{description}
-\end{description}
+\begin{dictroot}{f}{m}
+    \begin{dictentry}{\famword{aa}{f}{i}{m}{}}{v.tr.}
+        \dictdef*{to quote \textit{sme.}}
+    \end{dictentry}
+    \begin{dictentry}{\famword{a}{f}{i}{m}{u}}{n.}
+        \dictdef{book}
+        \dictdef{\textit{(fig.)} alphabet soup}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{f}{a}{m}{}}{n.}
+        \dictdef*{language, speech, way of speaking}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{f}{ii}{m}{}}{v.tr.}
+        \dictdef*{to say \textit{smth.}, to speak \textit{smth.}, to tell \textit{smth.}}
+    \end{dictentry}
+    \begin{dictentry}{\famword{i}{f}{aa}{m}{}}{v.intr.}
+        \dictdef*{to talk, to speak, to chatter}
+    \end{dictentry}
+    \begin{dictentry}{\famword{in}{f}{i}{m}{}}{n.}
+        \dictdef*{word}
+    \end{dictentry}
+    \begin{dictentry}{\famword{in}{f}{i}{m}{ini}}{n.}
+        \dictdef*{letter, character, symbol}
+    \end{dictentry}
+    \begin{dictentry}{\bigglot a\bigglot a\famword{}{f}{a}{m}{}}{n.}
+        \dictdef*{this language, \lang{}}
+    \end{dictentry}
+\end{dictroot}
 
-\section{\textsc{k---l}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{a}{k}{i}{l}{u}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] container of water to be drunk from, glass, cup, water bottle
-        \begin{quote}
-            \textsc{mark} se kaj men \famword{a}{k}{i}{l}{uila}\\
-            \textit{`Mark owned five water bottles.'}
-        \end{quote}
-    \end{description}
-    \newentry{\famword{i}{k}{aa}{l}{}}{v.intr.}
-    \begin{enumerate}
-        \item \textit{(impersonal)} to be a rainy day
-        \begin{quote}
-            \famword{waj}{h}{u}{j}{a} \famword{i}{k}{aa}{l}{}\\
-            \textit{`Today's a rainy day.'}
-        \end{quote}
-        \item \textit{(impersonal)} to be raining
-        \begin{quote}
-            \famword{i}{m}{u}{nt}{a} daw nas \famword{i}{j}{aa}{t}{e\lilglot} kaj da buse fit \famword{i}{k}{aa}{l}{}\\
-            \textit{`I wanted to go to the mountains, but it's raining there.'}
-        \end{quote}
-    \end{enumerate}
-    \newentry{\famword{}{k}{aju}{l}{a}}{n.}
-    \begin{enumerate}
-        \item the surface of a body of water
-        \begin{quote}
-            naswi \famword{}{k}{aju}{l}{a} tui \famword{}{f}{ii}{l}{ami\lilglot} dak\\
-            \textit{`We could see ourselves on the water's surface.'}
-        \end{quote}
-        \item puddle
-        \begin{quote}
-            nas \famword{}{k}{aju}{l}{a} daw tui \famword{i}{l}{aa}{s}{}\\
-            \textit{`I stepped in a puddle.'}
-        \end{quote}
-        \item map
+\begin{dictroot}{k}{l}
+    \begin{dictentry}{\famword{a}{k}{i}{l}{u}}{n.}
+        \dictdef*{
+            bottle
+            \begin{quote}
+                \textsc{mark} se kaj \famword{a}{k}{i}{l}{ulat} \famword{}{m}{ar}{h}{iila}\\
+                \textit{`Mark owned five bottles of milk.'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{i}{k}{aa}{l}{}}{v.intr.}
+        \dictdef{
+            \textit{(impersonal)} to be a rainy day
+            \begin{quote}
+                \famword{waj}{h}{u}{j}{a} \famword{i}{k}{aa}{l}{}\\
+                \textit{`Today's a rainy day.'}
+            \end{quote}
+        }
+        \dictdef{
+            \textit{(impersonal)} to be raining
+            \begin{quote}
+                \famword{i}{m}{u}{nt}{a} daw nas \famword{i}{j}{aa}{t}{e\lilglot} kaj da buse fit \famword{i}{k}{aa}{l}{}\\
+                \textit{`I wanted to go to the mountains, but it's raining there.'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{aju}{l}{a}}{n.}
+        \dictdef{
+            the surface of a body of water
+            \begin{quote}
+                naswi \famword{}{k}{aju}{l}{a} tui \famword{}{f}{ii}{l}{ami\lilglot} dak\\
+                \textit{`We could see ourselves on the water's surface.'}
+            \end{quote}
+        }
+        \dictdef{
+            puddle
+            \begin{quote}
+                nas \famword{}{k}{aju}{l}{a} daw tui \famword{i}{l}{aa}{s}{}\\
+                \textit{`I stepped in a puddle.'}
+            \end{quote}
+        }
+        \dictdef{
+            map
             \begin{quote}
                 par \famword{}{k}{aju}{l}{a} \famword{}{sw}{uu}{t}{ilali}?\\
                 \textit{`Is Switzerland on that map?'}
             \end{quote}
-    \end{enumerate}
-    \newentry{\famword{}{k}{a}{l}{}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] humidity, wetness, dampness
-        \begin{quote}
-            \famword{i}{f}{u}{s}{a} \famword{}{j}{a}{b}{auru}, da \famword{}{l}{aju}{s}{a} \famword{}{k}{a}{l}{ila}\\
-            \textit{`The house is lovely, but the floors are damp.'}
-        \end{quote}
-    \end{description}
-    \newentry{\famword{}{k}{a}{l}{a}}{adj.} 
-    \begin{enumerate}
-        \item covered in water, saturated with water, wet, soaked
-        \begin{quote}
-            \famword{}{k}{a}{l}{a} \famword{m}{l}{i}{s}{} \famword{}{s}{a}{fr}{aariak}\\
-            \textit{`Warm up your wet shoes.'}
-        \end{quote}
-        \item fluid, liquid, melted
-        \begin{quote}
-            \famword{}{k}{asi}{l}{} \famword{}{k}{a}{l}{a} \famword{}{c}{ur}{kl}{iila}\\
-            \textit{`The river was made of melted chocolate'}
-            %KNUT PLEASE WEIGH IN ON THIS
-            %I LIKE IT THIS IS GOOD -K
-        \end{quote}
-    \end{enumerate}
-    \newentry{\famword{}{k}{ar}{l}{i}}{n.}
-    \begin{description}[labelwidth=*]
-        \item[] liquid water, fresh water, water not part of a body of water or stream, water served as a beverage
-        \begin{quote}
-            mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
-            \textit{`Do you have any cold water?'}
-        \end{quote}
-    \end{description}
-    \newentry{\famword{}{k}{asi}{l}{}}{n.}
-        \begin{enumerate}
-            \item river, stream
-            \item stream or sprinkle of water, as from a faucet or tap
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{a}{l}{}}{n.}
+        \dictdef*{
+            humidity, wetness, dampness
+            \begin{quote}
+                \famword{i}{f}{u}{s}{a} \famword{}{j}{a}{b}{auru}, da \famword{}{l}{aju}{s}{a} \famword{}{k}{a}{l}{ila}\\
+                \textit{`The house is lovely, but the floors are damp.'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{a}{l}{a}}{adj.}
+        \dictdef{
+            covered in water, saturated with water, wet, soaked
+            \begin{quote}
+                \famword{}{k}{a}{l}{a} \famword{m}{l}{i}{s}{} \famword{}{s}{a}{fr}{aariak}\\
+                \textit{`Warm up your wet shoes.'}
+            \end{quote}
+        }
+        \dictdef{
+            fluid, liquid, melted
+            \begin{quote}
+                \famword{}{k}{asi}{l}{} \famword{}{k}{a}{l}{a} \famword{}{c}{ur}{kl}{iila}\\
+                \textit{`The river was made of melted chocolate'}
+                %KNUT PLEASE WEIGH IN ON THIS
+                %I LIKE IT THIS IS GOOD -K
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{ar}{l}{i}}{n.}
+        \dictdef*{
+            liquid water, fresh water, water not part of a body of water or stream, water served as a beverage
+            \begin{quote}
+                mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
+                \textit{`Do you have any cold water?'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{asi}{l}{}}{n.}
+        \dictdef{river, stream}
+        \dictdef{
+            stream or sprinkle of water, as from a faucet or tap
             \begin{quote}
                 \famword{i}{s}{u}{n}{a} \famword{}{b}{a}{b}{a} \famword{}{k}{asi}{l}{ila}\\
                 \textit{`The shower is low-flow'}\\
                 (lit., \textit{`The shower has a mild stream'})
             \end{quote}
-        \end{enumerate}
-    \newentry{\famword{}{k}{u}{l}{i}}{adj., n.}
-        \begin{description}[labelwidth=*]
-            \item[] blue, the color blue
-        \end{description}
-    \newentry{\famword{}{k}{u}{l}{u}}{ n.}
-        \begin{description}[labelwidth=*]
-            \item[] fish, fish-adjacent aquatic animal
-        \end{description}
-    \newentry{\famword{}{k}{ur}{l}{i}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] the Earth, the globe
-        \end{description}
-\end{description}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{u}{l}{i}}{adj., n.}
+        \dictdef*{blue, the color blue}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{u}{l}{u}}{n.}
+        \dictdef*{fish, fish-adjacent aquatic animal}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{ur}{l}{i}}{n.}
+        \dictdef*{the Earth, the globe}
+    \end{dictentry}
+\end{dictroot}
 
 \section{\textsc{pl---s}}
 \begin{description}[leftmargin=*]
