@@ -71,9 +71,15 @@
     \end{description}
     }%
 
+\newcommand{\dictsubtitle}[1]{%
+    \end{description}
+    \subsection*{#1}
+    \begin{description}[leftmargin=*]
+}%
+
 \newenvironment{dictentry}[2]%
     {%
-    \item[#1] $\bullet$ #2\hfill
+    \item[#1] $\bullet$ \textit{#2}\hfill
     \setcounter{definition}{0}
     \begin{description}[align=right,labelwidth=*,font=\normalfont]
     }{%
@@ -209,25 +215,28 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{llll}
-    \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
-    \multirow{2}{*}{{\rootpart}a{\rootpart}} & \multirow{2}{*}{Abstract noun}& \famword{}{s}{a}{j}{} & sleep \emph{(cf. \famword{i}{s}{aa}{j}{} `to sleep')}\\
-    & & \famword{}{k}{a}{l}{} & rainfall \emph{(cf. \famword{}{k}{ur}{l}{i} `raindrop')}\\
-    {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{j} `to write X')}\\
-    {\rootpart}ar{\rootpart}i & Liquid noun & \famword{}{q}{ar}{f}{i} & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
-    {\rootpart}ur{\rootpart}i & Object noun & \famword{}{n}{ur}{m}{i} & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
-    {\rootpart}idi{\rootpart} & Loose granular mass & \famword{}{w}{idi}{w}{} & sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')} \\
-    {\rootpart}asi{\rootpart} & Long slender object & \famword{}{b}{asi}{t}{} & hair \emph{(cf. \textsc{b}uli\textsc{t} `head')} \\
-    {\rootpart}uli{\rootpart} & Associated body part & \famword{}{b}{uli}{t}{} & head \emph{(cf. i\textsc{b}aa\textsc{t} `to understand')}\\
-    m{\rootpart}i{\rootpart} & Instrument, tool & \famword{m}{r}{i}{w}{} & weapon \emph{(cf. \textsc{r}a\textsc{q} `pain')} \\
-    i{\rootpart}u{\rootpart}a & Place of X/with X attribute & \famword{i}{h}{u}{j}{a} & night \emph{(cf. \textsc{h}a\textsc{t}a `dark')} \\
-    {\rootpart}ii{\rootpart} & Transitive verb & \famword{}{f}{ii}{s}{} & to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')} \\
-    i{\rootpart}aa{\rootpart} & Intransitive verb & \famword{i}{\bigglot}{aa}{\bigglot}{} & to act stupidly \emph{(cf. e\bigglot a\bigglot a `dumb')} \\
-    aa{\rootpart}i{\rootpart} & Causative verb & TBD & TBD \\
-    {\rootpart}a{\rootpart}a & Primary attribute & \famword{}{s}{a}{fr}{a} & hot \emph{(cf. \textsc{s}a\textsc{f}e\textsc{r} `heat')} \\
-    {\rootpart}u{\rootpart}u & Animal & \famword{}{b}{u}{rk}{u} & dog \emph{(cf. \textsc{b}a\textsc{rk} `bark')} \\
-    {\rootpart}uu{\rootpart} & Country & \famword{}{f}{uu}{ns}{} & France \emph{(cf. \textsc{f}u\textsc{ns}u `frog')} \\
-    {\rootpart}aju{\rootpart}a & Flat plane, surface & \famword{}{k}{aju}{l}{a} & Water surface \emph{(cf. \textsc{k}ar\textsc{l}i `water')}
+    \begin{tabular}{@{}rllll@{}}
+    & \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
+    1. & {\rootpart}a{\rootpart} & Abstract noun & \famword{}{k}{a}{l}{} & humidity \emph{(cf. \famword{i}{k}{aa}{l}{} `to rain')}\\
+    2. & i{\rootpart}aa{\rootpart} & Intransitive verb & \famword{i}{\bigglot}{aa}{\bigglot}{} & to act stupidly \emph{(cf. e\bigglot a\bigglot a `dumb')} \\
+    3. & {\rootpart}ii{\rootpart} & Transitive verb & \famword{}{f}{ii}{s}{} & to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')} \\
+    4. & aa{\rootpart}i{\rootpart} & Causative verb & \famword{aa}{n}{i}{m}{} & to feed \textit{(cf. \famword{i}{n}{aa}{m}{} `to eat')} \\
+    5. & {\rootpart}a{\rootpart}a & Primary attribute & \famword{}{s}{a}{fr}{a} & hot \emph{(cf. \textsc{s}a\textsc{f}e\textsc{r} `heat')} \\
+    6. & {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{j} `to write X')}\\
+    7. & {\rootpart}ur{\rootpart}i & Object noun & \famword{}{n}{ur}{m}{i} & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
+    8. & {\rootpart}ar{\rootpart}i & Liquid noun & \famword{}{q}{ar}{f}{i} & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
+    9. & i{\rootpart}u{\rootpart}a & Place of X/with X attribute & \famword{i}{h}{u}{j}{a} & night \emph{(cf. \textsc{h}a\textsc{t}a `dark')} \\
+    10. & m{\rootpart}i{\rootpart} & Instrument, tool & \famword{m}{r}{i}{w}{} & weapon \emph{(cf. \textsc{r}a\textsc{q} `pain')} \\
+    11. & in{\rootpart}i{\rootpart} & Diminutive & \famword{in}{f}{i}{m}{} & word \textit{(cf. \famword{}{f}{a}{m}{} `language')}\\
+    12. & {\rootpart}uli{\rootpart} & Associated body part & \famword{}{b}{uli}{t}{} & head \emph{(cf. i\textsc{b}aa\textsc{t} `to understand')}\\
+    13. & {\rootpart}u{\rootpart}u & Animal & \famword{}{b}{u}{rk}{u} & dog \emph{(cf. \famword{i}{b}{aa}{rk}{} `to bark')} \\
+    14. & {\rootpart}asi{\rootpart} & Long slender object & \famword{}{b}{asi}{t}{} & hair \emph{(cf. \textsc{b}uli\textsc{t} `head')} \\
+    15. & {\rootpart}aju{\rootpart}a & Flat plane, surface, or object & \famword{}{d}{aju}{l}{a} & mirror \emph{(cf. \famword{}{d}{ii}{l}{} `to stare at')} \\
+    16. & {\rootpart}idi{\rootpart} & Loose granular mass & \famword{}{w}{idi}{w}{} & sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')} \\
+    17. & {\rootpart}uu{\rootpart} & Country & \famword{}{f}{uu}{ns}{} & France \emph{(cf. \famword{}{f}{u}{ns}{u} `frog')} \\
+    18. & {\rootpart}u{\rootpart}i & Color & \famword{}{b}{u}{n}{i} & yellow \emph{(cf., \famword{}{b}{asi}{n}{} `banana')} \\
+    19. & a{\rootpart}i{\rootpart}u & Closed container & \famword{a}{k}{i}{l}{u} & bottle \emph{(cf. \famword{}{k}{ar}{l}{i} `water')} \\
+    20. & {\rootpart}imi{\rootpart}u & Open container & \famword{}{q}{imi}{f}{u} & coffee mug \emph{(cf. \famword{a}{q}{i}{f}{u} `coffee pot')} \\
     \end{tabular}
     \caption{Primary derivation patterns}
     \label{tab:primedevs}
@@ -594,7 +603,19 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \begin{multicols*}{2}
 
 \begin{dictroot}{b}{t}
-    \begin{dictentry}{\famword{}{b}{ii}{t}{}}{\textit{v.tr.}}
+    \begin{dictentry}{\famword{i}{b}{aa}{t}{}}{v.intr.}
+        \dictdef{%
+        to know, to understand, to be in a state of knowing or understanding what is going on
+        }
+        \dictdef{%
+        \textit{(when used reciprocally)} to love each other, to have a close platonic bond, to be the best of friends
+            \begin{quote}
+                nemi i\textsc{b}aa\textsc{t}ami\\
+                \textit{`The two of us are thick as thieves.'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{b}{ii}{t}{}}{v.tr.}
         \dictdef{%
             to know \textit{smth.}, to understand \textit{smth.}
             \begin{quote}
@@ -611,22 +632,10 @@ The obligatory gender marking is a means of expressing your gender identity in a
         \textit{NB: the subject is reversed from its use as `to understand': \emph{mi nas \textsc{b}ii\textsc{t}ibi} means `you understand me' but `I love you'.}
             }
     \end{dictentry}
-    \begin{dictentry}{\famword{i}{b}{aa}{t}{}}{\textit{v.intr.}}
-        \dictdef{%
-        to know, to understand, to be in a state of knowing or understanding what is going on
-        }
-        \dictdef{%
-        \textit{(when used reciprocally)} to love each other, to have a close platonic bond, to be the best of friends
-            \begin{quote}
-                nemi i\textsc{b}aa\textsc{t}ami\\
-                \textit{`The two of us are thick as thieves.'}
-            \end{quote}
-        }
-    \end{dictentry}
 \end{dictroot}
 
 \begin{dictroot}{dr}{p}
-    \begin{dictentry}{\famword{}{dr}{a}{p}{}}{\textit{n.}}
+    \begin{dictentry}{\famword{}{dr}{a}{p}{}}{n.}
         \dictdef{%
         bad accent
         }
@@ -638,38 +647,39 @@ The obligatory gender marking is a means of expressing your gender identity in a
             \end{quote}
         }
     \end{dictentry}
-    \begin{dictentry}{\famword{}{dr}{ii}{p}{}}{\textit{v.}}
-        \dictdef{%
-        to mimic \textit{sme.}, make fun of \textit{sme.}
-        }
-    \end{dictentry}
-    \begin{dictentry}{\famword{i}{dr}{aa}{p}{}}{\textit{v.}}
+    \begin{dictentry}{\famword{i}{dr}{aa}{p}{}}{v.}
         \dictdef{%
         to talk with an accent, talk in a funny voice
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{dr}{ii}{p}{}}{v.}
+        \dictdef{%
+        to mimic \textit{sme.}, make fun of \textit{sme.}
         }
     \end{dictentry}
 \end{dictroot}
 
 \begin{dictroot}{f}{m}
+    \begin{dictentry}{\famword{}{f}{a}{m}{}}{n.}
+        \dictdef*{language, speech, way of speaking}
+    \end{dictentry}
+    \begin{dictentry}{\famword{i}{f}{aa}{m}{}}{v.intr.}
+        \dictdef*{to talk, to speak, to chatter}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{f}{ii}{m}{}}{v.tr.}
+        \dictdef*{to say \textit{smth.}, to speak \textit{smth.}, to tell \textit{smth.}}
+    \end{dictentry}
     \begin{dictentry}{\famword{aa}{f}{i}{m}{}}{v.tr.}
         \dictdef*{to quote \textit{sme.}}
+    \end{dictentry}
+    \begin{dictentry}{\famword{in}{f}{i}{m}{}}{n.}
+        \dictdef*{word}
     \end{dictentry}
     \begin{dictentry}{\famword{a}{f}{i}{m}{u}}{n.}
         \dictdef{book}
         \dictdef{\textit{(fig.)} alphabet soup}
     \end{dictentry}
-    \begin{dictentry}{\famword{}{f}{a}{m}{}}{n.}
-        \dictdef*{language, speech, way of speaking}
-    \end{dictentry}
-    \begin{dictentry}{\famword{}{f}{ii}{m}{}}{v.tr.}
-        \dictdef*{to say \textit{smth.}, to speak \textit{smth.}, to tell \textit{smth.}}
-    \end{dictentry}
-    \begin{dictentry}{\famword{i}{f}{aa}{m}{}}{v.intr.}
-        \dictdef*{to talk, to speak, to chatter}
-    \end{dictentry}
-    \begin{dictentry}{\famword{in}{f}{i}{m}{}}{n.}
-        \dictdef*{word}
-    \end{dictentry}
+\dictsubtitle{Compounds \& Secondary Derivations}
     \begin{dictentry}{\famword{in}{f}{i}{m}{ini}}{n.}
         \dictdef*{letter, character, symbol}
     \end{dictentry}
@@ -679,12 +689,12 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \end{dictroot}
 
 \begin{dictroot}{k}{l}
-    \begin{dictentry}{\famword{a}{k}{i}{l}{u}}{n.}
+    \begin{dictentry}{\famword{}{k}{a}{l}{}}{n.}
         \dictdef*{
-            bottle
+            humidity, wetness, dampness
             \begin{quote}
-                \textsc{mark} se kaj \famword{a}{k}{i}{l}{ulat} \famword{}{m}{ar}{h}{iila}\\
-                \textit{`Mark owned five bottles of milk.'}
+                \famword{i}{f}{u}{s}{a} \famword{}{j}{a}{b}{auru}, da \famword{}{l}{aju}{s}{a} \famword{}{k}{a}{l}{ila}\\
+                \textit{`The house is lovely, but the floors are damp.'}
             \end{quote}
         }
     \end{dictentry}
@@ -701,6 +711,47 @@ The obligatory gender marking is a means of expressing your gender identity in a
             \begin{quote}
                 \famword{i}{m}{u}{nt}{a} daw nas \famword{i}{j}{aa}{t}{e\lilglot} kaj da buse fit \famword{i}{k}{aa}{l}{}\\
                 \textit{`I wanted to go to the mountains, but it's raining there.'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{a}{l}{a}}{adj.}
+        \dictdef{
+            covered in water, saturated with water, wet, soaked
+            \begin{quote}
+                \famword{}{k}{a}{l}{a} \famword{m}{l}{i}{s}{} \famword{}{s}{a}{fr}{aariak}\\
+                \textit{`Warm up your wet shoes.'}
+            \end{quote}
+        }
+        \dictdef{
+            fluid, liquid, melted
+            \begin{quote}
+                \famword{}{k}{asi}{l}{} \famword{}{k}{a}{l}{a} \famword{}{c}{ur}{kl}{iila}\\
+                \textit{`The river was made of melted chocolate'}
+                %KNUT PLEASE WEIGH IN ON THIS
+                %I LIKE IT THIS IS GOOD -K
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{ur}{l}{i}}{n.}
+        \dictdef*{the Earth, the globe}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{ar}{l}{i}}{n.}
+        \dictdef*{
+            liquid water, fresh water, water not part of a body of water or stream, water served as a beverage
+            \begin{quote}
+                mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
+                \textit{`Do you have any cold water?'}
+            \end{quote}
+        }
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{k}{asi}{l}{}}{n.}
+        \dictdef{river, stream}
+        \dictdef{
+            stream or sprinkle of water, as from a faucet or tap
+            \begin{quote}
+                \famword{i}{s}{u}{n}{a} \famword{}{b}{a}{b}{a} \famword{}{k}{asi}{l}{ila}\\
+                \textit{`The shower is low-flow'}\\
+                (lit., \textit{`The shower has a mild stream'})
             \end{quote}
         }
     \end{dictentry}
@@ -727,149 +778,89 @@ The obligatory gender marking is a means of expressing your gender identity in a
             \end{quote}
         }
     \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{a}{l}{}}{n.}
-        \dictdef*{
-            humidity, wetness, dampness
-            \begin{quote}
-                \famword{i}{f}{u}{s}{a} \famword{}{j}{a}{b}{auru}, da \famword{}{l}{aju}{s}{a} \famword{}{k}{a}{l}{ila}\\
-                \textit{`The house is lovely, but the floors are damp.'}
-            \end{quote}
-        }
-    \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{a}{l}{a}}{adj.}
-        \dictdef{
-            covered in water, saturated with water, wet, soaked
-            \begin{quote}
-                \famword{}{k}{a}{l}{a} \famword{m}{l}{i}{s}{} \famword{}{s}{a}{fr}{aariak}\\
-                \textit{`Warm up your wet shoes.'}
-            \end{quote}
-        }
-        \dictdef{
-            fluid, liquid, melted
-            \begin{quote}
-                \famword{}{k}{asi}{l}{} \famword{}{k}{a}{l}{a} \famword{}{c}{ur}{kl}{iila}\\
-                \textit{`The river was made of melted chocolate'}
-                %KNUT PLEASE WEIGH IN ON THIS
-                %I LIKE IT THIS IS GOOD -K
-            \end{quote}
-        }
-    \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{ar}{l}{i}}{n.}
-        \dictdef*{
-            liquid water, fresh water, water not part of a body of water or stream, water served as a beverage
-            \begin{quote}
-                mi \famword{}{n}{ar}{k}{a} \famword{}{k}{ar}{l}{iilali}?\\
-                \textit{`Do you have any cold water?'}
-            \end{quote}
-        }
-    \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{asi}{l}{}}{n.}
-        \dictdef{river, stream}
-        \dictdef{
-            stream or sprinkle of water, as from a faucet or tap
-            \begin{quote}
-                \famword{i}{s}{u}{n}{a} \famword{}{b}{a}{b}{a} \famword{}{k}{asi}{l}{ila}\\
-                \textit{`The shower is low-flow'}\\
-                (lit., \textit{`The shower has a mild stream'})
-            \end{quote}
-        }
+    \begin{dictentry}{\famword{}{k}{u}{l}{u}}{n.}
+        \dictdef*{fish, fish-adjacent aquatic animal}
     \end{dictentry}
     \begin{dictentry}{\famword{}{k}{u}{l}{i}}{adj., n.}
         \dictdef*{blue, the color blue}
     \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{u}{l}{u}}{n.}
-        \dictdef*{fish, fish-adjacent aquatic animal}
-    \end{dictentry}
-    \begin{dictentry}{\famword{}{k}{ur}{l}{i}}{n.}
-        \dictdef*{the Earth, the globe}
+    \begin{dictentry}{\famword{a}{k}{i}{l}{u}}{n.}
+        \dictdef*{
+            bottle
+            \begin{quote}
+                \textsc{mark} se kaj \famword{a}{k}{i}{l}{ulat} \famword{}{m}{ar}{h}{iila}\\
+                \textit{`Mark owned five bottles of milk.'}
+            \end{quote}
+        }
     \end{dictentry}
 \end{dictroot}
 
-\section{\textsc{pl---s}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{aa}{pl}{i}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to move \textit{smth.} to a place
-        \end{description}
-    \newentry{\famword{a}{pl}{i}{s}{u}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] generic container, bin, box
-        \end{description}
-    \newentry{\famword{i}{pl}{aa}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to be in a place
-        \end{description}
-    \newentry{\famword{}{pl}{asi}{s}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] line, row
-        \end{description}    
-    \newentry{\famword{}{pl}{ii}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to move oneself to a place
-        \end{description}
-\end{description}
+\begin{dictroot}{pl}{s}
+    \begin{dictentry}{\famword{i}{pl}{aa}{s}{}}{v.intr.}
+        \dictdef*{to be located, to be in a place}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{pl}{ii}{s}{}}{v.tr.}
+        \dictdef*{to move oneself to \textit{smwh.}}
+    \end{dictentry}
+    \begin{dictentry}{\famword{aa}{pl}{i}{s}{}}{v.tr.}
+        \dictdef*{to move \textit{smth.} to a place}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{pl}{asi}{s}{}}{n.}
+        \dictdef*{line, row}
+    \end{dictentry}
+    \begin{dictentry}{\famword{a}{pl}{i}{s}{u}}{n.}
+        \dictdef*{generic container, bin, box}
+    \end{dictentry}
+\end{dictroot}
 
-\section{\textsc{q---h}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{}{q}{asi}{h}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] snake
-        \end{description}
-    \newentry{\famword{}{q}{u}{h}{u}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] lizard, reptile
-        \end{description}
-\end{description}
+\begin{dictroot}{q}{h}
+    \begin{dictentry}{\famword{}{q}{u}{h}{u}}{n.}
+        \dictdef*{lizard, reptile}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{q}{asi}{h}{}}{n.}
+        \dictdef*{snake}
+    \end{dictentry}
+\end{dictroot}
 
-\section{\textsc{s---j}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{i}{s}{aa}{j}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to sleep
-        \end{description}
-    \newentry{\famword{}{s}{a}{j}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] sleep, the state of being asleep
-        \end{description}
-    \newentry{\famword{}{s}{a}{j}{a}}{adj.}
-        \begin{description}[labelwidth=*]
-            \item[] sleepy, tired, exhausted
-        \end{description}
-    \newentry{\famword{}{s}{a}{j}{}anara}{int.}
-        \begin{description}[labelwidth=*]
-            \item may you sleep well, have a good night\\
-            \textit{the gender affix -an may be substituted with a more apt affix.}
-        \end{description}
-    \newentry{\famword{}{s}{uli}{j}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[] the human back
-        \end{description}
-\end{description}
+\begin{dictroot}{s}{j}
+    \begin{dictentry}{\famword{}{s}{a}{j}{}}{n.}
+        \dictdef*{sleep, slumber, the state of being asleep}
+    \end{dictentry}
+    \begin{dictentry}{\famword{i}{s}{aa}{j}{}}{v.}
+        \dictdef*{to sleep, to be sleeping, to be asleep}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{s}{a}{j}{a}}{adj.}
+        \dictdef*{sleepy, tired, exhausted}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{s}{uli}{j}{}}{n.}
+        \dictdef*{back, dorsum, the human back}
+    \end{dictentry}
+\dictsubtitle{Compounds \& Secondary Derivations}
+    \begin{dictentry}{\famword{}{s}{a}{j}{anara}}{int.}
+        \dictdef*{
+            good night, sleep well, sweet dreams, goodbye\\
+            \textit{NB: The gender affix -an- can be substituted with a more apt gendered affix.}
+        }
+    \end{dictentry}
+\end{dictroot}
 
-\section{\textsc{sl---s}}
-\begin{description}[leftmargin=*]
-    \newentry{\famword{aa}{sl}{i}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to shut \textit{smth.} inside a container or behind a door
-        \end{description}
-    \newentry{\famword{i}{sl}{aa}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to be closed, to be locked
-        \end{description}
-    \newentry{\famword{m}{sl}{i}{s}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item[1] key
-            \item[2] passcode, PIN number
-        \end{description}
-    \newentry{\famword{}{sl}{asi}{s}{}}{n.}
-        \begin{description}[labelwidth=*]
-            \item zipper
-        \end{description}
-    \newentry{\famword{}{sl}{ii}{s}{}}{v.}
-        \begin{description}[labelwidth=*]
-            \item[] to close, to shut, to lock
-        \end{description}
-\end{description}
+\begin{dictroot}{sl}{s}
+    \begin{dictentry}{\famword{i}{sl}{aa}{s}{}}{v.intr.}
+        \dictdef*{to be closed, to be locked}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{sl}{ii}{s}{}}{v.tr.}
+        \dictdef*{to close, to shut, to lock}
+    \end{dictentry}
+    \begin{dictentry}{\famword{aa}{sl}{i}{s}{}}{v.tr.}
+        \dictdef*{to shut \emph{smth.} inside a container or behind a door}
+    \end{dictentry}
+    \begin{dictentry}{\famword{m}{sl}{i}{s}{}}{n.}
+        \dictdef*{lock}
+    \end{dictentry}
+    \begin{dictentry}{\famword{}{sl}{asi}{s}{}}{n.}
+        \dictdef*{zipper}
+    \end{dictentry}
+\end{dictroot}
 
 \end{multicols*}
 
@@ -877,38 +868,28 @@ The obligatory gender marking is a means of expressing your gender identity in a
 \begin{multicols*}{2}
 \section{Auxiliary Verbs}
 \begin{description}[leftmargin=*]
-    \newentry{dak}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] can, to be able to, to be allowed to
-    \end{description}
-    \newentry{hwii}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] not, no, don't, never
-    \end{description}
-    \newentry{jaa}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] already, previously, by now
-    \end{description}
-    \newentry{kaj}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] to want to, to be going to 
-    \end{description}
-    \newentry{lit}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] to very
-    \end{description}
-    \newentry{naw}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] to stop
-    \end{description}
-    \newentry{tuuq}{aux.}
-    \begin{description}[labelwidth=*]
-        \item[] must, to have to
-    \end{description}
+    \begin{dictentry}{dak}{aux.}
+        \dictdef*{can, to be able to, to be allowed to}
+    \end{dictentry}
+    \begin{dictentry}{hwii}{aux.}
+        \dictdef*{not, no, don't, never}
+    \end{dictentry}
+    \begin{dictentry}{jaa}{aux.}
+        \dictdef*{already, previously, by now}
+    \end{dictentry}
+    \begin{dictentry}{kaj}{aux.}
+        \dictdef*{to want to, to be going to }
+    \end{dictentry}
+    \begin{dictentry}{lit}{aux.}
+        \dictdef*{to very, to do emphatically or to an extreme extent}
+    \end{dictentry}
+    \begin{dictentry}{naw}{aux.}
+        \dictdef*{to stop}
+    \end{dictentry}
+    \begin{dictentry}{tuuq}{aux.}
+        \dictdef*{to must, to have to}
+    \end{dictentry}
 \end{description}
-
-
-
 
 \section{Postpositions}
 
