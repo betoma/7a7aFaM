@@ -1,0 +1,93 @@
+\documentclass[a4paper,10pt,twoside,openright]{memoir}
+\usepackage{multicol, multirow, array}
+\usepackage{fontspec}
+\usepackage{anyfontsize}
+\usepackage[pagecolor=none,dvipsnames]{xcolor}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{float, hhline}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{expex}
+\usepackage{enumitem}
+\usepackage[calc,english]{datetime2}
+\usepackage{suffix}
+
+%-----CONFIGURATION------
+%------------------------
+
+\setmainfont{Charis SIL}[CharacterVariant=43:1]
+\restylefloat{table}
+
+\setsecnumdepth{subsubsection}
+\settocdepth{subsubsection}
+
+\lingset{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex}
+
+\DTMnewdatestyle{eurodate}{%
+    \renewcommand{\DTMdisplaydate}[4]{%
+        \number##3.\nobreakspace%           day
+        \DTMmonthname{##2}\nobreakspace%    month
+        \number##1%                         year
+    }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMsetdatestyle{eurodate}
+
+\renewcommand{\arraystretch}{1.4}
+
+%-------COMMANDS---------
+%------------------------
+
+\newcommand{\lang}{ɁaɁa-\textsc{f}a\textsc{m}}
+\newcommand{\longv}{ː}
+\newcommand{\sqbrack}[1]{$\langle$#1$\rangle$}
+\newcommand{\phipa}[1]{/#1/}
+\newcommand{\bripa}[1]{[#1]}
+\newcommand{\ttilde}{\raise.17ex\hbox{$\scriptstyle\sim$}}
+\newcommand{\rootpart}{$\Theta$}
+\newcommand{\glotstop}{ʔ}
+\newcommand{\bigglot}{Ɂ}
+\newcommand{\lilglot}{ɂ}
+\newcommand{\nm}{\symbol{"2205}}
+\newcommand{\tiebar}{͡}
+\newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
+
+%------TITLE PAGE--------
+%------------------------
+
+\title{narish culture}
+\author{Bethany E. Toma, Knut F. K. Ulstrup}
+\date{\today}
+
+%-------MAIN DOC---------
+%------------------------
+
+\begin{document}
+    
+\part{History of Nareland}
+
+\chapter{Formation of the island}
+
+At the end of the last great iceage, the powerful wash of the glacial runoffs exiting the Scandinavian peninsula carried soil out into the North Sea, where the soil accumulated up against hilly formations north of Scotland to form a bank.
+
+\chapter{Early history}
+
+\chapter{Scandinavian immigrant wave}
+
+\part{Culture of the Narish People}
+
+\chapter{Names}
+
+Narish names are of widespread origins, stemming from native Narish traditional naming conventions, names of Scandinavian and British immigrants, as well as combinations thereof.
+
+\chapter{Religion}
+
+
+
+\end{document}
