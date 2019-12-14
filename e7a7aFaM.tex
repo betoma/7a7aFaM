@@ -65,7 +65,7 @@
 
 \newenvironment{dictroot}[2]%
     {%
-    \section{\textsc{#1---#2}}
+    \subsection{\uppercase{#1---#2}}
     \begin{description}[leftmargin=*]
     }{%
     \end{description}
@@ -73,7 +73,7 @@
 
 \newcommand{\dictsubtitle}[1]{%
     \end{description}
-    \subsection*{#1}
+    \subsubsection*{#1}
     \begin{description}[leftmargin=*]
 }%
 
