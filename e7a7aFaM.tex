@@ -141,10 +141,10 @@
     % \multirow{2}{*}{c \ttilde{} c\tiebar ç} & \multirow{2}{*}{k \ttilde{} k\tiebar x} & \multirow{2}{*}{q \ttilde{} q\tiebar χ} & \multirow{2}{*}{ʔ} \\
     c \ttilde{} c\tiebar ç & k \ttilde{} k\tiebar x & q \ttilde{} q\tiebar χ & \multirow{2}{*}{ʔ} \\
      Lenis & p \ttilde{} b & t \ttilde{} d & & & & \\
-    Fricative & ɸ & s & \multicolumn{4}{c}{ç \enspace \ttilde{} \enspace x \enspace \ttilde{} \enspace χ \enspace \ttilde{} \enspace ħ \enspace \ttilde{} \enspace h} \\
+    Fricative & f & s & \multicolumn{4}{c}{ç \enspace \ttilde{} \enspace x \enspace \ttilde{} \enspace χ \enspace \ttilde{} \enspace ħ \enspace \ttilde{} \enspace h} \\
     Approximant & & l & j & w & & \\
     Nasal & m & n & & & & \\
-    Rhotic & & \multicolumn{4}{c}{ɾ \enspace \ttilde{} \enspace r \enspace \ttilde{} \enspace ɹ \enspace \ttilde{} \enspace ɽ \enspace \ttilde{} \enspace ɻ \enspace \ttilde{} \enspace ʀ \enspace \ttilde{} \enspace ʁ } & \\
+    Rhotic & & \multicolumn{2}{c}{ɾ \enspace \ttilde{} \enspace ɹ \enspace \ttilde{} \enspace ɻ } & & & \\
     \bottomrule
     \end{tabular}
     \caption{Phonemic Consonant Inventory}
@@ -205,6 +205,9 @@ The informal writing conventions, also known as ``texting script", is the orthog
 
 \chapter{Morphology}
 \section{Underlying roots}
+
+The majority of lexical items are produced by 
+
 \section{Derivational morphology}
 
 \lang{} allows for words to be altered syntactically and semantically using a rich set of morphological operations, divided into two categories based on their concatenation. 
@@ -268,6 +271,8 @@ For quantities expressed in explicit units, this affix is used to mark the class
 
 bar akilulat karli - three bottles of water
 
+\subsection{Compounding}
+
 \subsection{Gender}
 
 Certain lexical items may be inflected to convey the gender of its referent. On certain words, namely \emph{-ara} greetings, gender marking is obligatory.
@@ -287,6 +292,49 @@ Certain lexical items may be inflected to convey the gender of its referent. On 
 \section{Inflectional morphology}
 
 \subsection{Verb finals}
+
+Verbs that are either not declarative, or not the head of the matrix clause, must be marked based on their purpose in the sentence. These verbs may appear in subordinate clauses, as converbs, serial verbs, or finite non-declarative head verbs.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{>{\em}ll}
+        -\nm        & Declarative verb \\
+        -\lilglot   & Connective \\
+        -li         & Interrogative \\
+        -ak         & Imperative \\
+        -tu         & Relative \\
+        -uc         & Subordinate \\
+    \end{tabular}
+\end{table}
+
+\paragraph{Declarative verbs} are unmarked, finite, and modally neutral. 
+
+\paragraph{Connective verbs} may be either finite or non-finite. They work in conjunction with the head verb to describe concurrent or subsequent actions, or to modify the meaning of the verb clause with auxilliary verbs.
+
+\pex[interpartskip=3ex]
+\a
+\begingl
+naswi[\textsc{1ex}]
+\famword{}{k}{aju}{l}{a}[water\_surface]
+tui[on\_surface\_of]
+\famword{}{f}{ii}{l}{ami}[notice\_oneself]
+-\lilglot[\textsc{con}]
+dak[can]
+\glft `we could see ourselves in the water surface.'
+\endgl
+\a
+\begingl
+nas[\textsc{1s}]
+bu[that]
+\famword{}{n}{u}{w}{u}[possum]
+\famword{}{r}{ii}{q}{}[hit]
+-e7[\textsc{con}]
+\famword{}{l}{a}{w}{}[up]
+daw[towards]
+\famword{i}{c}{aa}{n}{}[climb]
+\glft `I'm climbing up to hit that possum.'
+\endgl
+\xe
 
 \subsection{Evidential modality}
 
