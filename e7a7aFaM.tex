@@ -41,6 +41,8 @@
 
 \renewcommand{\arraystretch}{1.4}
 
+\lingset{belowpreambleskip=2ex}
+
 %-------COMMANDS---------
 %------------------------
 
@@ -119,7 +121,7 @@
 
 \chapter{Foreword}
 
-\lang{} is a constructed language.
+\lang{} is a constructed language spoken on the fictitious Nareland island.
 
 \newpage
 
@@ -348,10 +350,10 @@ daw[towards]
         \toprule
                 & Function          & Example & Translation \\
         \midrule
-        \nm-    & Direct Witness    & \famword{i}{n}{aa}{m}{e\lilglot} jaa      & \textit{`they've eaten'} \\
-        ir-     & Reportative       & ir\famword{i}{n}{aa}{m}{e\lilglot} jaa   & \textit{`they've eaten, they said'} \\
-        hwa-    & Inferential       & hwa\famword{i}{n}{aa}{m}{e\lilglot} jaa  & \textit{`they've eaten, judging by the crumbs'} \\
-        qaa-    & Internal/Assumed  & qaa\famword{i}{n}{aa}{m}{e\lilglot} jaa  & \textit{`they've probably eaten, it's after dinner time'} \\
+        \nm-    & Direct Witness    & \famword{i}{n}{aa}{m}{}     & \textit{`they're eating'} \\
+        ir-     & Reportative       & ir\famword{i}{n}{aa}{m}{}   & \textit{`they're eating, they said'} \\
+        hwa-    & Inferential       & hwa\famword{i}{n}{aa}{m}{}  & \textit{`they're eating, judging by the smell'} \\
+        qaa-    & Internal/Assumed  & qaa\famword{i}{n}{aa}{m}{}  & \textit{`they're probably eating, it's around dinner time'} \\
         \bottomrule
     \end{tabular}
     \caption{Evidential modality affixes}
@@ -359,27 +361,51 @@ daw[towards]
 \end{table}
 
 \ex
+\glpreamble \famword{}{f}{ana}{s}{aj} \famword{ir}{m}{a}{l}{aurutu} \famword{i}{n}{aa}{m}{e\lilglot} jaa.\\
 \begingl
 \famword{}{f}{ana}{s}{aj}[man]
-ir-[\textsc{rep}]@
+ir-[\textsc{rep-}]@
 \famword{}{m}{a}{l}{aurutu}[ill:\textsc{cop:rel}]
 \famword{i}{n}{aa}{m}{e\lilglot}[eat:\textsc{con}]
-jaa[\textsc{ver}]
-\glft `The man, who I was told was sick, was eating after all.'
+jaa[indeed]
+\glft `The man, who I was told was sick, was eating after all.'\\
+\endgl
+\xe
 
 In the above example, the evidential attaches to and scopes over only the relative clause \emph{`\famword{}{f}{ana}{s}{aj} \famword{}{m}{a}{l}{aurutu}'}, leaving the matrix clause unmodified. 
 
-\subsubsection{\emph{ir-} - Reportative speech}
+\subsubsection{\emph{ir-} Reportative speech}
 
-Information that has been obtained through the retelling by a secondary party is marked with \emph{ir-}. 
+Information that has been obtained through the retelling by a secondary party is marked with \emph{ir-}.
 
-\subsubsection{\emph{hwa-} - Inferential speech}
+\subsubsection{\emph{hwa-} Inferential speech}
 
-If the speaker hasn't observed an event themselves and is interpolating from current circumstances, they may use \emph{wha-} to mark 
+If the speaker hasn't observed an event themselves and is interpolating from current circumstances, they may use \emph{wha-} to mark this. 
 
-\subsubsection{\emph{qaa-} - Internal/Assumed speech}
+\ex
+\begingl
+\famword{}{m}{u}{h}{u}[cow]
+wa[this]
+\famword{}{PL}{a}{S}{}[place]
+fit[at]
+hwa-[\textsc{infer-}]@
+\famword{}{n}{ii}{w}{}[died]
+\glft `The cow was seemingly killed here.'
+\endgl
+\xe
+
+\subsubsection{\emph{qaa-} Internal/Assumed speech}
 
 Verbs can also be marked for whether the speaker has no concrete evidence or report of the event, but may still assume that said event happened because of a gut instinct, tendencies, routines, or assumptions about the world.
+
+\ex
+\begingl
+\famword{in}{f}{i}{s}{}[children]
+qaa-[\textsc{inter-}]@
+\famword{i}{s}{aa}{j}{}[sleep]
+\glft `The children are probably asleep by now.'
+\endgl
+\xe
 
 \newpage
 \section{Pronouns and determiners}
