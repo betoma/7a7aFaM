@@ -20,13 +20,13 @@
 %-----CONFIGURATION------
 %------------------------
 
-\setmainfont{Charis SIL}[CharacterVariant=43:1]
+\setmainfont{Charis SIL}
 \restylefloat{table}
 
 \setsecnumdepth{subsubsection}
 \settocdepth{subsubsection}
 
-\lingset{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex}
+\lingset{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex,everyglft=\it}
 
 \DTMnewdatestyle{eurodate}{%
     \renewcommand{\DTMdisplaydate}[4]{%
@@ -40,8 +40,6 @@
 \DTMsetdatestyle{eurodate}
 
 \renewcommand{\arraystretch}{1.4}
-
-\lingset{belowpreambleskip=2ex}
 
 %-------COMMANDS---------
 %------------------------
@@ -200,7 +198,7 @@ By and large, both orthographic conventions attempt to use the most intuitive re
 
 \subsection{Formal writing style}
 
-The formal writing conventions make use of small-caps letterforms to highlight roots. In addition, it uses the glottal stop character to indicate the glottal stop phoneme, using the capital glottal stop character \sqbrack{\bigglot} when the glottal stop is part of a root radical (for instance, in the word \textit{\bigglot a\bigglot a}) and the lowercase glottal stop character \sqbrack{\lilglot} otherwise (such as in the suffix \textit{-(e)\lilglot}).
+The formal writing conventions make use of small-caps letterforms to highlight roots. In addition, it uses the glottal stop character to indicate the glottal stop phoneme, using the capital glottal stop character \sqbrack{\bigglot} when the glottal stop is part of a root radical (for instance, in the word \textit{\bigglot a\bigglot a}) and the lowercase glottal stop character \sqbrack{\lilglot} otherwise (such as in the suffix \textit{-(e)}\lilglot).
 
 \subsection{Informal writing style}
 
@@ -220,7 +218,7 @@ The majority of lexical items are produced by
 Primary derivation refers to the non-concatenative morphology of stems. These operations are for the most part not productive, and not all roots have a corresponding stem with each of these patterns. They may not stack, i.e. a stem may only be inflected by one pattern at a time.
 
 \begin{table}[ht]
-    \centering
+    \centering\small
     \begin{tabular}{@{}rllll@{}}
     & \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
     1. & {\rootpart}a{\rootpart} & Abstract noun & \famword{}{k}{a}{l}{} & humidity \emph{(cf. \famword{i}{k}{aa}{l}{} `to rain')}\\
@@ -228,7 +226,7 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
     3. & {\rootpart}ii{\rootpart} & Transitive verb & \famword{}{f}{ii}{s}{} & to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')} \\
     4. & aa{\rootpart}i{\rootpart} & Causative verb & \famword{aa}{n}{i}{m}{} & to feed \textit{(cf. \famword{i}{n}{aa}{m}{} `to eat')} \\
     5. & {\rootpart}a{\rootpart}a & Primary attribute & \famword{}{s}{a}{fr}{a} & hot \emph{(cf. \famword{}{s}{a}{fr}{} `heat')} \\
-    6. & {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{j} `to write X')}\\
+    6. & {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{y} `to write X')}\\
     7. & {\rootpart}ur{\rootpart}i & Object noun & \famword{}{n}{ur}{m}{i} & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
     8. & {\rootpart}ar{\rootpart}i & Liquid noun & \famword{}{q}{ar}{f}{i} & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
     9. & i{\rootpart}u{\rootpart}a & Place of X/with X attribute & \famword{i}{h}{u}{t}{a} & night \emph{(cf. \textsc{h}a\textsc{t}a `dark')} \\
@@ -239,8 +237,8 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
     14. & {\rootpart}asi{\rootpart} & Long slender object & \famword{}{b}{asi}{t}{} & hair \emph{(cf. \textsc{b}uli\textsc{t} `head')} \\
     15. & {\rootpart}aju{\rootpart}a & Flat plane, surface, or object & \famword{}{d}{aju}{l}{a} & mirror \emph{(cf. \famword{}{d}{ii}{l}{} `to stare at')} \\
     16. & {\rootpart}idi{\rootpart} & Loose granular mass & \famword{}{w}{idi}{w}{} & sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')} \\
-    17. & {\rootpart}uu{\rootpart} & Country & \famword{}{f}{uu}{ns}{} & France \emph{(cf. \famword{}{f}{u}{ns}{u} `frog')} \\
-    18. & {\rootpart}u{\rootpart}i & Color & \famword{}{b}{u}{n}{i} & yellow \emph{(cf., \famword{}{b}{asi}{n}{} `banana')} \\
+    17. & {\rootpart}uu{\rootpart} & Country/people group & \famword{}{n}{uu}{rk}{} & Norway \emph{(cf. \famword{}{n}{a}{rk}{a} `cold')} \\
+    18. & {\rootpart}u{\rootpart}i & Color & \famword{}{k}{u}{w}{i} & yellow \emph{(cf., \famword{}{k}{aju}{w}{a} `leaf')} \\
     19. & a{\rootpart}i{\rootpart}u & Closed container & \famword{a}{k}{i}{l}{u} & bottle \emph{(cf. \famword{}{k}{ar}{l}{i} `water')} \\
     20. & {\rootpart}imi{\rootpart}u & Open container & \famword{}{q}{imi}{f}{u} & coffee mug \emph{(cf. \famword{a}{q}{i}{f}{u} `coffee pot')} \\
     21. & u{\rootpart}i{\rootpart}i & Emotion, experiential & \famword{u}{n}{i}{m}{i} & hungry \textit{(cf. \famword{}{n}{a}{m}{a}, `filling')}
@@ -255,9 +253,38 @@ Secondary derivation refers to the exclusively suffixing operations that may be 
 
 \subsubsection{\emph{-uru} - `to be'}
 
-Nominal and adjectival phrases are derived into verbs with the meaning "to be X" or "to have characteristic X" with the \emph{-uru} affix. 
+Rather than using a verbal copula, nominal and adjectival phrases are derived into verbs with the meaning `to be X' or `to have characteristic X' with the \emph{-uru} affix. 
 
-\subsubsection{\emph{-ila} - `to have'}
+\ex
+%\begingl
+%\glpreamble
+ha \textsc{Knut} \famword{in}{f}{i}{s}{uru}.\\
+%\endpreamble
+%\glft
+Knut is a baby.
+%\endgl
+\xe
+
+Adjectives and determiners may still modify a noun that has been turned modified into part of the verb, resulting in these words serving a semi-adverbial function in these cases. 
+
+\ex
+\begingl
+\glpreamble
+ha \textsc{Knut} li \famword{}{b}{a}{c}{a} \famword{in}{f}{i}{s}{uruli}?
+\endpreamble
+ha[\sc ref.m]
+\textsc{Knut}[Knut]
+li[which]
+\famword{}{b}{a}{c}{a}[small]
+\famword{in}{f}{i}{s}{}[baby]@
+-uru[\sc -cop]@
+-li[\sc -int]
+\glft
+`Which little baby is Knut?'
+\endgl
+\xe
+
+\subsubsection{\emph{-ila} - `there is', `to have'}
 
 \subsubsection{\emph{-ara} - wishes and greetings}
 
@@ -269,20 +296,64 @@ Nominal and adjectival phrases are derived into verbs with the meaning "to be X"
 
 \subsubsection{\emph{-ari} - `to become', `to cause to be'}
 
-\subsubsection{\emph{-lat} - `measured in', `comprising'}
+\subsubsection{\emph{-lat} -`measured in', `comprising'}
 
-For quantities expressed in explicit units, this affix is used to mark the classifier.
+When describing a quantity of something, often one may desire to use a particular noun as a measure of another. While many languages (English included) turn the measured substance into an adpositional phrase modifying the measure word as the head, in \lang{} one turns the measure word into an adjective modifying the substance being measured using the suffix \emph{-lat}. For instance, \emph{\famword{}{k}{imi}{l}{u}} `glass' becomes \emph{\famword{}{k}{imi}{l}{ulat}} `a glass of' in \emph{\famword{}{k}{imi}{l}{ulat} \famword{}{m}{ar}{h}{i}} `glass of milk'
 
-bar akilulat karli - three bottles of water
+This suffix is not used with numbers themselves, however, which can be prepended onto noun phrases like determiners without being adjectivalized.
+
+\ex
+\begingl
+\glpreamble
+pars bar \famword{a}{k}{i}{l}{ulat} \famword{}{k}{ar}{l}{i} \famword{}{k}{ii}{l}{}.
+\endpreamble
+pars[\sc 3.med]
+bar[three]
+\famword{a}{k}{i}{l}{u}[bottle]@
+-lat[\sc -meas]
+\famword{}{k}{ar}{l}{i}[water]
+\famword{}{k}{ii}{l}{}[drink]
+\glft `He drank three bottles of water.'
+\endgl
+\xe
+
+\subsubsection{\emph{-aki} - `made/comprised of'}
+
+When one thing is constructed from/comprised of a particular material, one can indicate this by taking the noun of the material in question and turning it into an adjective using the suffix \emph{-aki}---for instance, \textit{\famword{}{r}{u}{rkd}{i}} `wood' becomes \textit{\famword{}{r}{u}{rkd}{iaki}} `wooden'. 
+
+\ex
+\begingl
+\glpreamble%
+nas \famword{}{m}{aju}{w}{aaki} \famword{i}{f}{u}{s}{airi}%
+\endpreamble%
+nas[\sc 1sg]
+\famword{}{m}{aju}{w}{a}[playing\_card]@
+-aki[-made\_of]
+\famword{i}{f}{u}{s}{a}[house]@
+-iri[-make]
+\glft `I'm building a house of cards.'
+\endgl
+\xe
 
 \subsubsection{\emph{-s(e)} - `the ... one'}
 
 Used to nominalize adjectives in contexts where the head is known or obvious.
 
 \ex
-\famword{}{c}{a}{kl}{as} nas kaj!\\
-\textit{`I want the chocolate one!'}
+\begingl
+\glpreamble
+A: mi li \famword{}{m}{asi}{h}{} \famword{}{n}{ii}{m}{e\lilglot} kajli? \textit{(`Which ice cream bar do you want to eat?')}\\
+B: \famword{}{c}{a}{kl}{as} nas kaj!%
+\endpreamble
+\famword{}{c}{a}{kl}{a}[chocolate]@
+-s[\sc -nmz]
+nas[\sc 1sg]
+kaj[want]
+\glft `I want the chocolate one!'
+\endgl
 \xe
+
+Unlike equivalent periphrastic constructions from other languages (such as English's `the chocolate one'), this derivation can only be applied to bare adjectives, and thus cannot be applied to relative clauses or strings of adjectives.
 
 \subsection{Compounding}
 
@@ -312,7 +383,7 @@ Verbs that are either not declarative, or not the head of the matrix clause, mus
     \centering
     \begin{tabular}{>{\em}ll}
         -\nm        & Declarative verb \\
-        -\lilglot   & Connective \\
+        -(e)\lilglot   & Connective \\
         -li         & Interrogative \\
         -ak         & Imperative \\
         -tu         & Relative \\
@@ -330,10 +401,11 @@ Verbs that are either not declarative, or not the head of the matrix clause, mus
 naswi[\textsc{1ex}]
 \famword{}{k}{aju}{l}{a}[water\_surface]
 tui[on\_surface\_of]
-\famword{}{f}{ii}{l}{ami}[notice\_oneself]
--\lilglot[\textsc{con}]
+\famword{}{f}{ii}{l}{}[notice]@
+-ami[\sc -refl]@
+-\lilglot[-\textsc{cvb}]
 dak[can]
-\glft `we could see ourselves in the water surface.'
+\glft `We could see ourselves in the water surface.'
 \endgl
 \a
 \begingl
@@ -341,7 +413,7 @@ nas[\textsc{1s}]
 bu[that]
 \famword{}{n}{u}{w}{u}[possum]
 \famword{}{r}{ii}{q}{}[hit]
--e7[\textsc{con}]
+-e\lilglot[\textsc{con}]
 \famword{}{l}{a}{w}{}[up]
 daw[towards]
 \famword{i}{c}{aa}{n}{}[climb]
@@ -360,7 +432,7 @@ daw[towards]
                 & Function          & Example & Translation \\
         \midrule
         \nm-    & Direct Witness    & \famword{i}{n}{aa}{m}{}     & \textit{`they're eating'} \\
-        ir-     & Reportative       & ir\famword{i}{n}{aa}{m}{}   & \textit{`they're eating, they said'} \\
+        ir\,-     & Reportative       & ir\famword{i}{n}{aa}{m}{}   & \textit{`they're eating, they said'} \\
         hwa-    & Inferential       & hwa\famword{i}{n}{aa}{m}{}  & \textit{`they're eating, judging by the smell'} \\
         qaa-    & Internal/Assumed  & qaa\famword{i}{n}{aa}{m}{}  & \textit{`they're probably eating, it's around dinner time'} \\
         \bottomrule
@@ -370,8 +442,9 @@ daw[towards]
 \end{table}
 
 \ex
-\glpreamble \famword{}{f}{ana}{s}{aj} \famword{ir}{m}{a}{l}{aurutu} \famword{i}{n}{aa}{m}{e\lilglot} jaa.\\
 \begingl
+\glpreamble \famword{}{f}{ana}{s}{aj} \famword{ir}{m}{a}{l}{aurutu} \famword{i}{n}{aa}{m}{e\lilglot} jaa.
+\endpreamble
 \famword{}{f}{ana}{s}{aj}[man]
 ir-[\textsc{rep-}]@
 \famword{}{m}{a}{l}{aurutu}[ill:\textsc{cop:rel}]
