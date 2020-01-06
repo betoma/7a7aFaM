@@ -62,6 +62,7 @@
 %-----DICT COMMANDS------
 %------------------------
 
+\newcounter{dictwordcount}
 \newcounter{definition}
 
 \newenvironment{dictroot}[2]%
@@ -81,7 +82,8 @@
 \newenvironment{dictentry}[2]%
     {%
     \item[#1] $\bullet$ \textit{#2}\hfill
-    \setcounter{definition}{0}
+    \setcounter{definition}{0}%
+    \refstepcounter{dictwordcount}%
     \begin{description}[align=right,labelwidth=*,font=\normalfont]
     }{%
     \end{description}
