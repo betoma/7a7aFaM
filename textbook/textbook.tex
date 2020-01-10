@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt,twoside,openright]{memoir}
+\documentclass[a5paper,10pt,twoside,openright]{memoir}
 \usepackage{multicol, multirow, array}
 \usepackage{fontspec}
 \usepackage{anyfontsize}
@@ -62,12 +62,27 @@
 \newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
 \newcommand{\famq}[1]{»#1«}
 
+\newenvironment{conversation}
+    {\begin{table}[ht]
+        \begin{tabular}{p{0.962\textwidth}}
+        \toprule
+        \textbf{Conversation} \\
+        \midrule
+    }
+    { 
+        \bottomrule
+        \end{tabular}
+    \end{table}
+    }
+
+\newcommand{\diagline}[2]{\hspace{2em} \textbf{\uppercase{#1:}} {#2} \\}
+
 %-------TITLE PAGE-------
 %------------------------
 
-\title{{\fontsize{100}{100}\selectfont \itshape \famword{i}{f}{aa}{m}{ak}!} \\ \fontsize{30}{30} \sffamily A Beginner's Guide to Narish}
+\title{{\fontsize{70}{70}\selectfont \itshape \famword{i}{f}{aa}{m}{ak}!} \\ \fontsize{25}{30} \sffamily A Beginner's Guide to Narish}
 \author{Bethany E. Toma, Knut F. K. Ulstrup}
-\date{\today}
+\date{}%\today}
 
 %--------MAIN DOC--------
 %------------------------
@@ -89,10 +104,21 @@
 
 \mainmatter
 
-\chapter{Introduction to \lang}
+\chapter{Introduction to Narish}
 
-\chapter{Writing system}
+\chapter{The Narish alphabet}
+
+Narish uses a peculiar writing style that will seem odd to most, but it is this way for good reason. In many words, certain letters are more important than others as they point to a common overarching meaning, called the \emph{root}, and it's important that these letters stand out for readability.
+
+In the words \famword{}{k}{ar}{l}{i} \textit{`water'}, \famword{}{k}{a}{l}{a} \textit{`wet'}, \famword{i}{k}{aa}{l}{} \textit{`it's raining'}, and \famword{a}{k}{i}{l}{u} \textit{`bottle'}, the letters \textsc{k} and \textsc{l} are part of the root \emph{K-L}, which doesn't have a meaning of its own, but clearly ties together all these words related to water in some way. All of these words are comprised of two root consonants and a template called a \emph{stem} that these consonants slot into. 
 
 \chapter{Saying hello}
+
+The first thing you'll be doing in any conversation is to say hello. 
+
+\begin{conversation}
+    \diagline{A}{\famword{}{f}{a}{s}{}ajara.}
+    \diagline{B}{\famword{}{f}{a}{s}{}unara.}
+\end{conversation}
 
 \end{document}
