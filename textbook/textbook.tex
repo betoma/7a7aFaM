@@ -61,6 +61,7 @@
 \newcommand{\tiebar}{͡}
 \newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
 \newcommand{\famq}[1]{»#1«}
+\newcommand{\glem}[1]{\underline{\smash{#1}}}
 
 \newenvironment{conversation}
     {\begin{table}[ht]
@@ -108,13 +109,47 @@
 
 \chapter{The Narish alphabet}
 
-Narish uses a peculiar writing style that will seem odd to most, but it is this way for good reason. In many words, certain letters are more important than others as they point to a common overarching meaning, called the \emph{root}, and it's important that these letters stand out for readability.
+Narish uses the latin alphabet, slightly modified to suit the language better.
+
+\begin{table}[ht]
+    \begin{tabular}{lllll}
+        \toprule
+        \multicolumn{3}{l}{letter cases} & \footnotesize sound & \footnotesize example \\
+        \midrule
+        \lilglot & \bigglot & \bigglot & /ʔ/ & like the break in `uh-oh' \\
+        a & A & \textsc{a} & /a/            & h\glem{a}rd \\
+        b & B & \textsc{b} & /p{\ttilde}b/  & \glem{b}ottle \\
+        c & C & \textsc{c} & /c{\ttilde}c{\tiebar}ç/ & \glem{ch}ance \\
+        d & D & \textsc{d} & /t{\ttilde}d/  & \glem{d}onkey \\
+        e & E & \textsc{e} & /ə/            & fac\glem{e}t, m\glem{ea}sure \\
+        f & F & \textsc{f} & /f/            & \glem{f}acet \\
+        h & H & \textsc{h} & /h{\ttilde}χ/  & \glem{h}appy, lo\glem{ch} \\
+        i & I & \textsc{i} & /i/            & f\glem{ee}l \\
+        j & J & \textsc{j} & /j/            & \glem{y}awn \\
+        k & K & \textsc{k} & /k{\ttilde}k{\tiebar}x/ & \glem{c}ar \\
+        l & L & \textsc{l} & /l/            & be\glem{l}ieve \\
+        m & M & \textsc{m} & /m/            & \glem{m}an \\
+        n & N & \textsc{n} & /n/            & \glem{n}otion \\
+        p & P & \textsc{p} & /pʰ{\ttilde}p{\tiebar}ɸ/& \glem{p}allet \\
+        q & Q & \textsc{q} & /q/            & like /k/ further back \\ 
+        r & R & \textsc{r} & /ɾ{\ttilde}ɹ/  & bu\glem{tt}er, \glem{r}eally \\
+        s & S & \textsc{s} & /s/            & \glem{s}ing \\
+        t & S & \textsc{t} & /tʰ{\ttilde}t{\tiebar}s/& \glem{t}ime \\
+        u & U & \textsc{u} & /u/            & h\glem{u}l\glem{u} \\
+        w & W & \textsc{w} & /w/            & \glem{w}ater \\
+        y & Y & \textsc{y} & /j/            & \glem{y}awn \\
+    \end{tabular}
+\end{table}
+
+\chapter{Forming words}
+
+The peculiar writing style will seem odd to most, but it is this way for good reason. In many words, certain letters are more important than others as they point to a common overarching meaning, called the \emph{root}, and it's important that these letters stand out for readability.
 
 In the words \famword{}{k}{ar}{l}{i} \textit{`water'}, \famword{}{k}{a}{l}{a} \textit{`wet'}, \famword{i}{k}{aa}{l}{} \textit{`it's raining'}, and \famword{a}{k}{i}{l}{u} \textit{`bottle'}, the letters \textsc{k} and \textsc{l} are part of the root \emph{K-L}, which doesn't have a meaning of its own, but clearly ties together all these words related to water in some way. All of these words are comprised of two root consonants and a template called a \emph{stem} that these consonants slot into. 
 
 \chapter{Saying hello}
 
-The first thing you'll be doing in any conversation is to say hello. 
+Of course, the first part of any conversation is greetings.
 
 \begin{conversation}
     \diagline{A}{\famword{}{f}{a}{s}{}ajara.}
