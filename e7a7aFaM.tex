@@ -62,6 +62,10 @@
 %-----DICT COMMANDS------
 %------------------------
 
+\makeatletter
+\@beginparpenalty=10000
+\makeatother
+
 \newcounter{dictwordcount}
 \newcounter{definition}
 
@@ -90,7 +94,7 @@
     }%
 
 \newcommand{\dictdef}[1]{\refstepcounter{definition}%
-    \item[\thedefinition.] #1
+\item[\thedefinition.] #1
 }%
 
 \WithSuffix\newcommand\dictdef*[1]{%
