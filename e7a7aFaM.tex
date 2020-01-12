@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage[calc,english]{datetime2}
 \usepackage{suffix}
+\usepackage{afterpage}
 
 %-----CONFIGURATION------
 %------------------------
@@ -58,6 +59,19 @@
 \newcommand{\tiebar}{͡}
 \newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
 \newcommand{\famq}[1]{»#1«}
+
+%----QoL COMMAND-------
+%----------------------
+
+\newcounter{numbertable}
+
+\newcommand{\whatisthisfuckery}{\thenumbertable.}
+
+\newcommand{\wtf}[1]{\thenumbertable. & #1 \\\refstepcounter{numbertable} }
+
+%\newcommand{numbertablerow}[1]{%
+%    \refstepcounter{numbertable}
+%    \thenumbertable. & #1 }
 
 %-----DICT COMMANDS------
 %------------------------
@@ -223,35 +237,163 @@ The majority of lexical items are produced by
 
 Primary derivation refers to the non-concatenative morphology of stems. These operations are for the most part not productive, and not all roots have a corresponding stem with each of these patterns. They may not stack, i.e. a stem may only be inflected by one pattern at a time.
 
-\begin{table}[ht]
-    \centering\small
+\afterpage{%
+\clearpage
+\setcounter{numbertable}{0}
+\begin{table}[p]
+    \centering
     \begin{tabular}{@{}rllll@{}}
-    & \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\
-    1. & {\rootpart}a{\rootpart} & Abstract noun & \famword{}{k}{a}{l}{} & humidity \emph{(cf. \famword{i}{k}{aa}{l}{} `to rain')}\\
-    2. & i{\rootpart}aa{\rootpart} & Intransitive verb & \famword{i}{\bigglot}{aa}{\bigglot}{} & to act stupidly \emph{(cf. e\bigglot a\bigglot a `dumb')} \\
-    3. & {\rootpart}ii{\rootpart} & Transitive verb & \famword{}{f}{ii}{s}{} & to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')} \\
-    4. & aa{\rootpart}i{\rootpart} & Causative verb & \famword{aa}{n}{i}{m}{} & to feed \textit{(cf. \famword{i}{n}{aa}{m}{} `to eat')} \\
-    5. & {\rootpart}a{\rootpart}a & Primary attribute & \famword{}{s}{a}{fr}{a} & hot \emph{(cf. \famword{}{s}{a}{fr}{} `heat')} \\
-    6. & {\rootpart}ana{\rootpart} & Person of X, Agentive noun & \famword{}{k}{ana}{j}{} & author \emph{(cf. \textsc{k}ii\textsc{y} `to write X')}\\
-    7. & {\rootpart}ur{\rootpart}i & Object noun & \famword{}{n}{ur}{m}{i} & food \emph{(cf. \textsc{n}ii\textsc{m} `to eat X')}\\
-    8. & {\rootpart}ar{\rootpart}i & Liquid noun & \famword{}{q}{ar}{f}{i} & coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} \\
-    9. & i{\rootpart}u{\rootpart}a & Place of X/with X attribute & \famword{i}{h}{u}{t}{a} & night \emph{(cf. \textsc{h}a\textsc{t}a `dark')} \\
-    10. & m{\rootpart}i{\rootpart} & Instrument, tool & \famword{m}{r}{i}{q}{} & weapon \emph{(cf. \textsc{r}a\textsc{q} `pain')} \\
-    11. & in{\rootpart}i{\rootpart} & Diminutive & \famword{in}{f}{i}{m}{} & word \textit{(cf. \famword{}{f}{a}{m}{} `language')}\\
-    12. & {\rootpart}uli{\rootpart} & Associated body part & \famword{}{b}{uli}{t}{} & head \emph{(cf. i\textsc{b}aa\textsc{t} `to understand')}\\
-    13. & {\rootpart}u{\rootpart}u & Animal & \famword{}{b}{u}{rk}{u} & dog \emph{(cf. \famword{i}{b}{aa}{rk}{} `to bark')} \\
-    14. & {\rootpart}asi{\rootpart} & Long slender object & \famword{}{b}{asi}{t}{} & hair \emph{(cf. \textsc{b}uli\textsc{t} `head')} \\
-    15. & {\rootpart}aju{\rootpart}a & Flat plane, surface, or object & \famword{}{d}{aju}{l}{a} & mirror \emph{(cf. \famword{}{d}{ii}{l}{} `to stare at')} \\
-    16. & {\rootpart}idi{\rootpart} & Loose granular mass & \famword{}{w}{idi}{w}{} & sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')} \\
-    17. & {\rootpart}uu{\rootpart} & Country/people group & \famword{}{n}{uu}{rk}{} & Norway \emph{(cf. \famword{}{n}{a}{rk}{a} `cold')} \\
-    18. & {\rootpart}u{\rootpart}i & Color & \famword{}{k}{u}{w}{i} & yellow \emph{(cf., \famword{}{k}{aju}{w}{a} `leaf')} \\
-    19. & a{\rootpart}i{\rootpart}u & Closed container & \famword{a}{k}{i}{l}{u} & bottle \emph{(cf. \famword{}{k}{ar}{l}{i} `water')} \\
-    20. & {\rootpart}imi{\rootpart}u & Open container & \famword{}{q}{imi}{f}{u} & coffee mug \emph{(cf. \famword{a}{q}{i}{f}{u} `coffee pot')} \\
-    21. & u{\rootpart}i{\rootpart}i & Emotion, experiential & \famword{u}{n}{i}{m}{i} & hungry \textit{(cf. \famword{}{n}{a}{m}{a}, `filling')}
+    & \textit{Pattern} & \textit{Meaning} & \textit{Example} & \\\refstepcounter{numbertable}
+    \wtf{
+        \famword{}{\rootpart}{a}{\rootpart}{} & %
+        Abstract noun & %
+        \famword{}{j}{a}{b}{} & %
+        good fortune \emph{(cf. \famword{}{j}{a}{b}{a} `good, fortunate')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{ii}{\rootpart}{} & %
+        Transitive verb & %
+        \famword{}{f}{ii}{s}{} & %
+        to give birth to \emph{(cf. \textsc{f}ana\textsc{s} `person')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{iya}{\rootpart}{} & %
+        Unaccusative verb & %
+        \famword{}{k}{iya}{l}{} & %
+        to be poured out \emph{(cf. \famword{}{k}{ar}{l}{i} `water')}
+    }
+    \wtf{
+        \famword{i}{\rootpart}{aa}{\rootpart}{} & %
+        Unergative verb & %
+        \famword{i}{n}{aa}{m}{} & %
+        to eat \emph{(cf. \famword{}{n}{ii}{m}{} `to eat (smth.)')}
+    }
+    \wtf{
+        \famword{\rootpart$_1$i}{\rootpart$_1$}{iya}{\rootpart$_2$}{} & %
+        Causative of unaccusative & %
+        \famword{\textsc{k}i}{k}{iya}{l}{} & %
+        to pour (smth.) out \emph{(cf. \famword{}{k}{iya}{l}{} `to flow out')}
+    }
+    \wtf{
+        \famword{aa}{\rootpart}{i}{\rootpart}{} & %
+        Causative of unergative & %
+        \famword{aa}{n}{i}{m}{} & %
+        to feed \textit{(cf. \famword{i}{n}{aa}{m}{} `to eat')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{a}{\rootpart}{a} & %
+        Attributive & %
+        \famword{}{s}{a}{fr}{a} & %
+        hot \emph{(cf. \famword{}{s}{a}{fr}{} `heat')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{ana}{\rootpart}{} & %
+        Person of X & %
+        \famword{}{k}{ana}{j}{} & %
+        author \emph{(cf. \textsc{k}ii\textsc{y} `to write (smth.)')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{ur}{\rootpart}{i} & %
+        Object & %
+        \famword{}{n}{ur}{m}{i} & %
+        food \emph{(cf. \famword{i}{n}{aa}{m}{} `to eat')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{ar}{\rootpart}{i} & %
+        Liquid noun & %
+        \famword{}{q}{ar}{f}{i} & %
+        coffee \emph{(cf. i\textsc{q}aa\textsc{f} `to drink coffee')} 
+    }
+    \wtf{
+        \famword{i}{\rootpart}{u}{\rootpart}{a} & %
+        Place of X & %
+        \famword{i}{h}{u}{t}{a} & %
+        night \emph{(cf. \famword{}{h}{a}{t}{a} `dark')}
+    }
+    \wtf{
+        \famword{m}{\rootpart}{i}{\rootpart}{} & %
+        Tool/instrument & %
+        \famword{m}{r}{i}{q}{} & %
+        weapon \emph{(cf. \textsc{r}a\textsc{q} `pain')}
+    }
+    \wtf{
+        \famword{in}{\rootpart}{i}{\rootpart}{} & %
+        Diminutive & %
+        \famword{in}{f}{i}{m}{} & %
+        word \textit{(cf. \famword{}{f}{a}{m}{} `language')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{uli}{\rootpart}{} & %
+        Body part & %
+        \famword{}{b}{uli}{t}{} & %
+        head \emph{(cf. \famword{i}{b}{aa}{t}{} `to understand')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{u}{\rootpart}{u} & %
+        Animal & %
+        \famword{}{c}{um}{p}{u} & %
+        kangaroo \emph{(cf. \famword{i}{c}{aa}{m}{p} `to jump')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{asi}{\rootpart}{} & %
+        Long, slender object & %
+        \famword{}{n}{asi}{rk}{} & %
+        icicle \emph{(cf. \famword{}{n}{u}{rk}{i} `snowball')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{aju}{\rootpart}{a} & %
+        Flat object or surface & %
+        \famword{}{d}{aju}{l}{a} & %
+        mirror \emph{(cf. \famword{}{d}{ii}{l}{} `to stare at')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{idi}{\rootpart}{} & %
+        Loose, granular mass & %
+        \famword{}{w}{idi}{w}{} & %
+        sugar \emph{(cf. \textsc{w}a\textsc{w}a `sweet')}
+    }
+    \wtf{
+        \famword{a}{\rootpart}{i}{\rootpart}{u} & %
+        Closed/natural container & %
+        \famword{a}{b}{i}{rd}{u} & %
+        bird's nest \emph{(cf. \famword{}{b}{u}{rd}{u} `bird')} 
+    }
+    \wtf{
+        \famword{}{\rootpart}{imi}{\rootpart}{u} & %
+        Open/unnatural container & %
+        \famword{}{q}{imi}{f}{u} & %
+        coffee mug \emph{(cf. \famword{a}{q}{i}{f}{u} `coffee pot')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{u}{\rootpart}{i} & %
+        Color & %
+        \famword{}{k}{u}{w}{i} & %
+        green \emph{(cf., \famword{}{k}{aju}{w}{a} `leaf')}
+    }
+    \wtf{
+        \famword{u}{\rootpart}{i}{\rootpart}{i} & %
+        Experiential & 
+        \famword{u}{n}{i}{m}{i} & 
+        hungry \emph{(cf. \famword{}{n}{a}{m}{a} `satisfying')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{uu}{\rootpart}{} & %
+        People group, land of X people & %
+        \famword{}{n}{uu}{rk}{} & %
+        Nords, Norse, Norway \emph{(cf. \famword{}{n}{a}{rk}{a} `cold')}
+    }
+    \wtf{
+        \famword{}{\rootpart}{a}{\rootpart}{ia} & %
+        Nationstate & %
+        \famword{}{fr}{a}{nc}{ia} & %
+        France \emph{(cf. \famword{}{fr}{uu}{nc}{} `Franks')}
+    }
     \end{tabular}
     \caption{Primary derivation patterns}
     \label{tab:primedevs}
 \end{table}
+\clearpage
+}
 
 \subsection{Secondary derivation}
 
@@ -301,6 +443,8 @@ li[which]
 \subsubsection{\emph{-ini} - diminutive}
 
 \subsubsection{\emph{-ari} - `to become', `to cause to be'}
+
+\subsubsection{\emph{-inala} - `to make X-er, to increase'}
 
 \subsubsection{\emph{-lat} -`measured in', `comprising'}
 
