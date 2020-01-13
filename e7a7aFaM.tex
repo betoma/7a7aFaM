@@ -57,15 +57,13 @@
 \newcommand{\lilglot}{ɂ}
 \newcommand{\nm}{\symbol{"2205}}
 \newcommand{\tiebar}{͡}
-\newcommand{\famword}[5]{#1\textsc{#2}#3\textsc{#4}#5}
+\newcommand\famword[1]{{\addfontfeatures{Letters=UppercaseSmallCaps}#1}}
 \newcommand{\famq}[1]{»#1«}
 
 %----QoL COMMAND-------
 %----------------------
 
 \newcounter{numbertable}
-
-\newcommand{\whatisthisfuckery}{\thenumbertable.}
 
 \newcommand{\wtf}[1]{\thenumbertable. & #1 \\\refstepcounter{numbertable} }
 
@@ -99,7 +97,7 @@
 
 \newenvironment{dictentry}[2]%
     {%
-    \item[#1] $\bullet$ \textit{#2}\hfill
+    \item[\famword{#1}] $\bullet$ \textit{#2}\hfill
     \setcounter{definition}{0}%
     \refstepcounter{dictwordcount}%
     \begin{description}[align=right,labelwidth=*,font=\normalfont]
