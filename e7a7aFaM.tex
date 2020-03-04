@@ -193,6 +193,10 @@
 
 Syllables always contain a vowel nucleus, with rarely more than two onset consonants and two coda consonants. Sonority hierarchy plays a big role in the structure of syllables and their realization.
 
+\subsection{Sonority Hierarchy}
+
+
+
 \subsection{High vowel lowering}
 
 The high vowels /i u/ are lowered to [e o] before /j w/ respectively. 
@@ -201,18 +205,26 @@ The high vowels /i u/ are lowered to [e o] before /j w/ respectively.
 
 \subsection{Epenthetic schwa}
 
-The epenthetic schwa appears within consonant sequences that, without adjacent vowels, violate syllable structure and may not be realized. It occurs in the earliest non-initial position possible that provides legal consonant sequences. For example, the word \famword{NurRKi} is phonemically /ˈnurrkʰi/, but \lang{} does not allow duplicate continuant phonemes, leaving the second /r/ out of the first syllable. The following syllable would not be able to accomodate it either, as it would violate the sonority rules by placing a less sonorous phoneme between two more sonorous ones. Of the two positions for the epenthetic schwa within this sequence, [ˈnuɾəɾkʰi] and [ˈnuɾɾəkʰi], only the former solution accomodates both restrictions and yields a legal realization. \\
+The epenthetic schwa appears within consonant sequences that, without adjacent vowels, violate syllable structure and may not be realized. It occurs in the earliest non-initial position possible that provides legal consonant sequences. This schwa is never stressed. For example, the word \famword{NurRKi} is phonemically /ˈnurrkʰi/, but \lang{} does not allow duplicate continuant phonemes, leaving the second /r/ out of the first syllable. The following syllable would not be able to accomodate it either, as it would violate the sonority rules by placing a less sonorous phoneme between two more sonorous ones. Of the two positions for the epenthetic schwa within this sequence, [ˈnuɾəɾkʰi] and [ˈnuɾɾəkʰi], only the former solution accomodates both restrictions and yields a legal realization.
 
-Word-onset sequences may never be disambiguated by prefixing an epenthetic schwa to the word. Like in medial and coda sequences, the epenthetic schwa must occur interconsonantally, but not across word boundaries. 
+\begin{table}[ht]
+    \begin{tabular}{lll}
+        \textit{Example}    & \textit{Phonemic transcription}   & \textit{Phonetic Realization} \\
+        \famword{NurRKi}    & /ˈnurrkʰi/                        & [ˈnuɾəɾkʰi] \\
+        \famword{mBiT}      & /ˈmpitʰ/                          & [məˈbitʰ] \\
+        \famword{inNiM}     & /inˈnim/                          & [inəˈnim] \\
+        \famword{SaFR}      & /ˈsafr/                           & [ˈsafər] 
+    \end{tabular}
+\end{table}
 
-In the sequence |...C$_a$\#C$_x$C$_y$V...|, where C$_a$ is a consonant in the preceding word and C$_x$C$_y$ is an illegal sequence, the epenthetic schwa may not attempt to separate C$_a$ and C$_x$ in any way, and must instead separate C$_x$ and C$_y$. 
+Word-onset sequences may never be disambiguated by prefixing an epenthetic schwa to the word. Like in medial and coda sequences, the epenthetic schwa must occur interconsonantally, but not across word boundaries. In the sequence |...C$_a$\#C$_x$C$_y$V...|, where C$_a$ is a consonant in the preceding word and C$_x$C$_y$ is an illegal sequence, the epenthetic schwa may not attempt to separate C$_a$ and C$_x$ in any way, and must instead separate C$_x$ and C$_y$. Word boundaries are inherently segmenting and preclude other segmenting elements like the epenthetic schwa. However, compound words are considered to be one phonological word, and in lacking a word boundary must make use of the epenthetic schwa.
 
 \section{Prosody}
 
 Stress, in the form of elevated pitch and volume, is placed on the first non-schwa vowel of the word, after the first root radical, on a long vowel immediately preceding the first radical, or on certain morphemes that carry stress.
 
 \begin{table}[ht]
-    \centering
+    %\centering
     \begin{tabular}{lll}
         nemiwi & [nəˈmiwi] & first non-schwa vowel of word\\
         parse & [ˈparsə] & first non-schwa vowel of word\\
@@ -538,8 +550,6 @@ Certain lexical items may be inflected to convey the gender of its referent. On 
     -an & Gender-neutral, agender \\
     \end{tabular}
 \end{table}
-
-
 
 \section{Inflectional morphology}
 
