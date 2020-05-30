@@ -1,0 +1,47 @@
+Topological Relations
+using the topological relations picture series from Bowerman & Pederson 1992 (which can be found at http://fieldmanuals.mpi.nl/volumes/1992/bowped/)
+
+01: the cup -> the table FIT
+    the cup -> the table's top (table lu LaW) FIT
+
+02: the apple -> the bowl FIT
+
+03: the stamp -> the envelope TUI
+
+04: the ribbon -> the candle RIJT
+
+05: the hat -> the man FIT
+    the hat -> the man's head (man lu BuliT) FIT
+    (however, a helmet or something that encases the head more than this sort of hat would use:
+    the helmet -> the man RIJT
+    the helmet -> the man's head (man lu BuliT) RIJT
+    )
+
+06: the dog -> the house FIDUL
+
+07: the spider -> the ceiling FIT
+
+08: the book -> the shelf FIT
+
+09: the coat -> the hook BIR
+
+10: the ring -> the finger RIJT
+
+11: the ship -> the sea FIT
+
+12: the butter -> the knife TUI
+
+13: the lamp -> the table UWA
+
+14: the box -> the bag FIT
+
+15: the fence -> the house RIJT
+
+16: the ball -> the chair JAN
+
+17: the tree -> the hill FIT
+    (but NOT the hill's top FIT)
+
+18: the hole -> the towel TUI
+
+19: 
