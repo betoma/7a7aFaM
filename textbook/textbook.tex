@@ -67,9 +67,13 @@
 \newcommand{\famq}[1]{»#1«}
 \newcommand{\glem}[1]{\underline{\smash{#1}}}
 
+\newcommand{\convowidth}{0.862\textwidth}
+
 \newenvironment{conversation}
-    {\begin{table}[ht]
-        \begin{tabular}{p{0.962\textwidth}}
+    {\renewcommand{\arraystretch}{0.75}
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{p{\convowidth}}
         \toprule
         \textbf{Conversation} \\
         \midrule
@@ -78,9 +82,21 @@
         \bottomrule
         \end{tabular}
     \end{table}
+    \renewcommand{\arraystretch}{1.4}
     }
 
-\newcommand{\diagline}[3]{\hspace{1em} \textbf{\uppercase{#1:}} {#2} \textit{`#3'} \\}
+\newcommand{\diaglinetest}[2]{\hspace{1em} 
+
+\begin{minipage}[c][0.5cm][t]{\convowidth}
+    \textbf{\uppercase{#1:}} \famword{#2}
+\end{minipage} \\}
+
+\newcommand{\diagline}[3]{\hspace{1em} 
+
+\begin{minipage}[c][1cm][t]{\convowidth}
+    \textbf{\uppercase{#1:}} \famword{#2} \\
+    \textit{`#3'}
+\end{minipage} \\}
 
 %-------TITLE PAGE-------
 %------------------------
@@ -110,8 +126,6 @@
     \end{figure}
 \end{titlingpage}
 
-
-
 \frontmatter
 
 \tableofcontents
@@ -124,7 +138,22 @@
     \textit{\small ``Speaking a single language is easy, \\ speaking many languages is a burden, \\ but speaking all languages liberates you.'' \\ -Old \langeng proverb}
 \end{quote}
 
-\noindent Whether you want to learn more about \langeng{} culture, move to \landeng{}, or just communicate with your \langeng{} friends, we hope this textbook will give you an approachable yet thorough introduction to the \langeng{} language! By the end of this book you'll be able to navigate almost anything from everyday situations to even nuanced philosophical quandries of life.
+\noindent Whether you want to learn more about \langeng{} culture, move to \landeng{}, or just communicate with your \langeng{} friends, we hope this textbook will give you an approachable yet thorough introduction to the \langeng{} language! By the end of this book you'll be able to navigate almost anything from everyday situations to even nuanced philosophical debates on life.
+
+\chapter{This textbook's structure}
+
+Each chapter will hone in on a specific aspect of conversation. You'll be provided with exerpts of conversations showcasing the topic, as well as notes on usage, traditions, and anything else that would be relevant. In later chapters you'll also be provided with interlinear glosses of sentences to show how they're put together. 
+
+Conversations will be provided in the following format. Participants are labelled with ``A", ``B", ``C" etc., and each line will have its translation in italics below it.
+
+\begin{conversation}
+    \diagline{a}{Example sentence?}{Translation?}
+    \diagline{b}{Example sentence!}{Translation!}
+    \diagline{a}{``Example" sentence.}{Translation.}
+    \diagline{c}{Example sentence...}{Translation...}
+\end{conversation}
+
+At the end of each chapter, you'll be given a small review task in the form of a conversation to translate and a small quiz. At the end of each part, you'll be given a larger task of translating a whole conversation.
 
 \chapter{The Narish alphabet}
 
@@ -164,16 +193,18 @@ Narish uses the latin alphabet, slightly modified to better suit the language.
 
 \mainmatter
 
-\part{Beginner's grammar}
+\part{Getting started}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+This first part will revolve around all the things you'll need to move around the large cities on your own. At the end of this part, you should be able to introduce yourself politely, order food, ask for direction, and ask 
 
 \chapter{Hello, I am...}
 
 Of course, the first part of any conversation is greetings. It's important that you convey greetings and wishes properly, as their exact forms are determined by your gender expression.
 
 \begin{conversation}
-    \diagline{A}{\famword{FaSajara}.}{Hello.}
-    \diagline{B}{\famword{FaSunara}.}{Hello.}
+    \diagline{A}{FaSajara.}{Hello.}
+    \diagline{B}{FaSunara.}{Hello.}
 \end{conversation}
 
 In the above example, person A identifies themselves as male by using the male form \emph{\famword{FaS\glem{aj}ara}}, and person B identifies themselves as female by means of the female form \emph{\famword{FaS\glem{un}ara}}. When you say hello, you're letting the other person know exactly how you identify, and they're also telling you back! There are in total four different forms, as listed below:
@@ -197,8 +228,8 @@ The agender form also works as an unspecified form. You'll often see companies u
 But just saying hello doesn't cut it a lot of the time, often you have to let people know your name as well. 
 
 \begin{conversation}
-    \diagline{a}{\famword{FaSajara, nas ha KNUTuru.}}{Hello, I am Knut.}
-    \diagline{b}{\famword{KNUT FaSunara, nas fu BETHANYuru.}}{Hi Knut, I am Bethany.}
+    \diagline{a}{FaSajara, nas ha KNUTuru.}{Hello, I am Knut.}
+    \diagline{b}{KNUT FaSunara, nas fu BETHANYuru.}{Hi Knut, I am Bethany.}
 \end{conversation}
 
 Here you see the suffix \emph{-uru}. This suffix does the same thing as `to be' in English, saying that something \emph{is} something. So, \emph{\famword{`KNUTuru'}} translates into `is Knut', `are Knut', or `am Knut' depending on the context. We'll get back to that in a later chapter.
@@ -218,6 +249,21 @@ The other thing you see is \emph{ha} and \emph{fu}. These prepositions are to sh
 \end{table}
 
 The third preposition \emph{na} is used for both nonbinary and unspecified/agender people as there isn't a single most common convention for distinguishing the two. However, people may have colloquial prepositions that do make that distinction, so don't be afraid to stray from what is taught in this book!
+
+\section*{Review lesson}
+
+\begin{conversation}
+    \diaglinetest{a}{nas ha MIKALuru.}
+    \diaglinetest{b}{MIKAL FaSanara, nas na KULIuru.}
+    \diaglinetest{a}{FaSajara!}
+\end{conversation}
+
+\noindent Tasks:
+\begin{enumerate}
+    \item Translate the above conversation.
+    \item How does Kuli identify? What about Mikal?
+    \item If Mikal identified as female, how would they introduce themselves? Translate ``Hello, my name is...''.
+\end{enumerate}
 
 \chapter{Thanks, you're welcome}
 
@@ -259,12 +305,13 @@ Unlike English, \lang{} doesn't have specific words for "yes" and "no". Surprisi
     \diagline{a}{\famword{NiiM.}}{[Yes,] I eat.}
 \end{conversation}
 
+\newpage
 If you need to disagree with someone's question, you simply use \emph{hwii}:
 
 \begin{conversation}
-    \diagline{a}{\famword{mi MarHi KiiLli?}}{Do you drink milk?}
-    \diagline{b}{hwii.}{[no,] I don't}
-\end{conversation}
+    \diagline{a}{\famword{mi SeHaNa-FaM FiiMli?}}{Do you speak English?}
+    \diagline{b}{hwii.}{[no,] I don't.}
+\end{conversation} 
 
 In fact, \emph{hwii} is actually a verb that means `to not' or `to not be', and if the polarity of the question is reversed, so must your answers be too. That's because \emph{hwii} is now the main verb that you repeat of you agree. If you want to disagree with a negative question, you repeat the verb right next to \emph{hwii}, but add \emph{da} before it:
 
@@ -276,6 +323,22 @@ In fact, \emph{hwii} is actually a verb that means `to not' or `to not be', and 
 \end{conversation}
 
 As you can also see, the way to make pretty much any statement into a question is to add \emph{-li} to the verb. 
+
+\section*{Review lesson}
+
+\begin{conversation}
+    \diaglinetest{a}{FaSajara, mi SeHana-FaM baj iFaaMli?}
+    \diaglinetest{b}{hwii.}
+    \diaglinetest{a}{mi da DaNa-FaM baj iFaaMli?}
+    \diaglinetest{b}{FiiM. mi SeHaNa hwiili?}
+    \diaglinetest{a}{da uru!}
+\end{conversation}
+
+\noindent Tasks:
+
+\begin{enumerate}
+    \item Translate the conversation above.
+\end{enumerate}
 
 \chapter{What? What's this? This is...}
 
@@ -302,9 +365,7 @@ jabauru, bajauru, safrauru, narkauru
 
 nas, mi, miwi
 
-\chapter{Pronouns continued}
 
-nemi, naswi, nemiwi
 
 \chapter{I want, I want to.../I'm going to...}
 
@@ -313,10 +374,12 @@ The word for `to want' in \langeng{} is \emph{kaj.} It's a verb, just like in En
 \begin{table}[ht]
     \centering
     \begin{tabular}{ll}
+        \toprule
         \famword{KarLi kaj.} & I want water.\\
         \famword{pars kaj.} & I want that.\\
         \famword{inNiM kaj.} & I want a snack.\\
         \famword{NasiM kaj.} & I want chopsticks.\\
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -325,9 +388,11 @@ To say that you want \emph{to do} something, you do the same thing with the verb
 \begin{table}[ht]
     \centering
     \begin{tabular}{ll}
+        \toprule
         \famword{iSaaJe\lilglot{} kaj.} & I want to go to bed.\\
         \famword{iNaaMe\lilglot{} kaj.} & I want to eat.\\
         \famword{aFiMu DiiLe\lilglot{} kaj.} & I want to read a book.\\
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -335,7 +400,11 @@ While \emph{kaj} works just like `want', it also has a second meaning of `to be 
 
 \chapter{Numbers}
 
-\chapter{Why? How?}
+\chapter{Pronouns continued}
+
+nemi, naswi, nemiwi
+
+\chapter{Where is that?}
 
 \part{Intermediate Grammar}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
