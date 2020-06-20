@@ -67,9 +67,13 @@
 \newcommand{\famq}[1]{»#1«}
 \newcommand{\glem}[1]{\underline{\smash{#1}}}
 
+\newcommand{\convowidth}{0.862\textwidth}
+
 \newenvironment{conversation}
-    {\begin{table}[ht]
-        \begin{tabular}{p{0.962\textwidth}}
+    {\renewcommand{\arraystretch}{0.75}
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{p{\convowidth}}
         \toprule
         \textbf{Conversation} \\
         \midrule
@@ -78,9 +82,21 @@
         \bottomrule
         \end{tabular}
     \end{table}
+    \renewcommand{\arraystretch}{1.4}
     }
 
-\newcommand{\diagline}[3]{\hspace{2em} \textbf{\uppercase{#1:}} {#2} \textit{`#3'} \\}
+\newcommand{\diaglinetest}[2]{\hspace{1em} 
+
+\begin{minipage}[c][0.5cm][t]{\convowidth}
+    \textbf{\uppercase{#1:}} \famword{#2}
+\end{minipage} \\}
+
+\newcommand{\diagline}[3]{\hspace{1em} 
+
+\begin{minipage}[c][1cm][t]{\convowidth}
+    \textbf{\uppercase{#1:}} \famword{#2} \\
+    \textit{`#3'}
+\end{minipage} \\}
 
 %-------TITLE PAGE-------
 %------------------------
@@ -88,6 +104,15 @@
 \title{\fontsize{70}{70}\selectfont \itshape \famword{iFaaMak!} \\ \fontsize{25}{30} \sffamily A Beginner's Guide to \langeng}
 \author{Bethany E. Toma, Knut F. K. Ulstrup}
 \date{}%\today}
+
+%----TABLE OF CONTENTS---
+%------------------------
+
+\cftpagenumbersoff{part}
+\cftsetindents{part}{1.5em}{1.5em}
+\renewcommand\cftchapterfont{\textrm}
+
+
 
 %--------MAIN DOC--------
 %------------------------
@@ -103,21 +128,32 @@
 
 \frontmatter
 
+\tableofcontents
+
+\chapter{Introduction to \langeng}
+
 \begin{quote}
     \textbf{\famq{\famword{\Large NaJDa FaM baj iFaaM se BaBauru \\ JaLa FaM baj iFaaM se TaLWuru \\ da TaPa FaM baj iFaaM se mi FaRaariibi.}}}
 
     \textit{\small ``Speaking a single language is easy, \\ speaking many languages is a burden, \\ but speaking all languages liberates you.'' \\ -Old \langeng proverb}
 \end{quote}
 
-\newpage
+\noindent Whether you want to learn more about \langeng{} culture, move to \landeng{}, or just communicate with your \langeng{} friends, we hope this textbook will give you an approachable yet thorough introduction to the \langeng{} language! By the end of this book you'll be able to navigate almost anything from everyday situations to even nuanced philosophical debates on life.
 
-\tableofcontents
+\chapter{This textbook's structure}
 
-\mainmatter
+Each chapter will hone in on a specific aspect of conversation. You'll be provided with exerpts of conversations showcasing the topic, as well as notes on usage, traditions, and anything else that would be relevant. In later chapters you'll also be provided with interlinear glosses of sentences to show how they're put together. 
 
-\chapter{Introduction to \langeng}
+Conversations will be provided in the following format. Participants are labelled with ``A", ``B", ``C" etc., and each line will have its translation in italics below it.
 
-Whether you want to learn more about \langeng{} culture, move to \landeng{}, or just communicate with your \langeng{} friends, we hope this textbook will give you an approachable yet thorough introduction to the \langeng{} language! By the end of this book you'll be able to navigate almost anything from everyday situations to even nuanced philosophical quandries of life.
+\begin{conversation}
+    \diagline{a}{Example sentence?}{Translation?}
+    \diagline{b}{Example sentence!}{Translation!}
+    \diagline{a}{``Example" sentence.}{Translation.}
+    \diagline{c}{Example sentence...}{Translation...}
+\end{conversation}
+
+At the end of each chapter, you'll be given a small review task in the form of a conversation to translate and a small quiz. At the end of each part, you'll be given a larger task of translating a whole conversation.
 
 \chapter{The Narish alphabet}
 
@@ -155,15 +191,20 @@ Narish uses the latin alphabet, slightly modified to better suit the language.
     \end{tabular}
 \end{table}
 
-\part{Beginner's grammar}
+\mainmatter
+
+\part{Getting started}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+This first part will revolve around all the things you'll need to move around the large cities on your own. At the end of this part, you should be able to introduce yourself politely, order food, ask for direction, and ask 
 
 \chapter{Hello, I am...}
 
 Of course, the first part of any conversation is greetings. It's important that you convey greetings and wishes properly, as their exact forms are determined by your gender expression.
 
 \begin{conversation}
-    \diagline{A}{\famword{FaSajara}.}{Hello.}
-    \diagline{B}{\famword{FaSunara}.}{Hello.}
+    \diagline{A}{FaSajara.}{Hello.}
+    \diagline{B}{FaSunara.}{Hello.}
 \end{conversation}
 
 In the above example, person A identifies themselves as male by using the male form \emph{\famword{FaS\glem{aj}ara}}, and person B identifies themselves as female by means of the female form \emph{\famword{FaS\glem{un}ara}}. When you say hello, you're letting the other person know exactly how you identify, and they're also telling you back! There are in total four different forms, as listed below:
@@ -175,23 +216,23 @@ In the above example, person A identifies themselves as male by using the male f
         Male & \famword{FaSajara} \\
         Female & \famword{FaSunara} \\
         Nonbinary & \famword{FaSujara} \\
-        Unspecified & \famword{FaSanara} \\
+        Agender & \famword{FaSanara} \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 It's okay to switch between the forms if you should feel so inclined, and most \langeng{}ers don't mind. \landeng{} overall is very supportive of LGBTQ+ communities; it's in fact fairly common for people of any gender identity to feel comfortable expressing themselves.
 
-The unspecified form also works as an agender form. You'll often see companies use \emph{\famword{FaSanara}}, because they often speak on behalf of their employees whose identities can't be unanimously determined.
+The agender form also works as an unspecified form. You'll often see companies use \emph{\famword{FaSanara}}, because companies don't have a gender identity.
 
-Just saying hello doesn't cut it a lot of the time, often you have to let people know your name as well. 
+But just saying hello doesn't cut it a lot of the time, often you have to let people know your name as well. 
 
 \begin{conversation}
-    \diagline{a}{\famword{FaSajara, nas ha KNUTuru.}}{Hello, I am Knut.}
-    \diagline{b}{\famword{KNUT FaSunara, nas fu BETHANYuru.}}{Hi Knut, I am Bethany.}
+    \diagline{a}{FaSajara, nas ha KNUTuru.}{Hello, I am Knut.}
+    \diagline{b}{KNUT FaSunara, nas fu BETHANYuru.}{Hi Knut, I am Bethany.}
 \end{conversation}
 
-In the above conversation, you see the suffix \emph{-uru}. This suffix does the same thing as `to be' in English, saying that something \emph{is} something. So, \emph{\famword{`KNUTuru'}} translates into `is Knut', `are Knut', or `am Knut' depending on the context.
+Here you see the suffix \emph{-uru}. This suffix does the same thing as `to be' in English, saying that something \emph{is} something. So, \emph{\famword{`KNUTuru'}} translates into `is Knut', `are Knut', or `am Knut' depending on the context. We'll get back to that in a later chapter.
 
 The other thing you see is \emph{ha} and \emph{fu}. These prepositions are to show the gender of the person when saying their name. Note that they are \emph{only} used when talking about a person, not if you're calling someone's name or talking about the name as a concept. You can see B doesn't use \emph{ha} when saying A's name because she is directly addressing A.
 
@@ -209,7 +250,22 @@ The other thing you see is \emph{ha} and \emph{fu}. These prepositions are to sh
 
 The third preposition \emph{na} is used for both nonbinary and unspecified/agender people as there isn't a single most common convention for distinguishing the two. However, people may have colloquial prepositions that do make that distinction, so don't be afraid to stray from what is taught in this book!
 
-\chapter{Thanks}
+\section*{Review lesson}
+
+\begin{conversation}
+    \diaglinetest{a}{nas ha MIKALuru.}
+    \diaglinetest{b}{MIKAL FaSanara, nas na KULIuru.}
+    \diaglinetest{a}{FaSajara!}
+\end{conversation}
+
+\noindent Tasks:
+\begin{enumerate}
+    \item Translate the above conversation.
+    \item How does Kuli identify? What about Mikal?
+    \item If Mikal identified as female, how would they introduce themselves? Translate ``Hello, my name is...''.
+\end{enumerate}
+
+\chapter{Thanks, you're welcome}
 
 Remember how \famword{FaSajara} is made of \famword{FaS} and some other bits? The -ara suffix constructs these phrases from nouns, together with one of the gender suffixes. The noun can be anything related to what you're currently doing, even saying things like "sorry, I forgot" and even "have a nice flight".
 
@@ -223,32 +279,39 @@ In this chapter's example conversations, A is serving food to B as a waiter or h
 See how B responds with \famword{NaMunara}? The way you say thank you in response to someone's wellwishes is to repeat the expression right back. 
 
 \begin{conversation}
-    \diagline{A}{\famword{NurMiila}}{Here's your meal.}
-    \diagline{B}{\famword{NaMunara}}{Thank you.}
-    \diagline{A}{\famword{NaMajara}}{You're welcome, enjoy!}
+    \diagline{A}{\famword{NurMiila}.}{Here's your meal.}
+    \diagline{B}{\famword{NaMunara}.}{Thank you.}
+    \diagline{A}{\famword{NaMajara}!}{You're welcome, enjoy!}
 \end{conversation}
 
 In this conversation, B says the -ara expression first to say thank you, and A is the one to respond. The response here can be translated as "you're welcome", not "thank you" like in the first conversation. 
 
-It doesn't matter which individual says \emph{\famword{NaMajara/NaMunara}} first. It's okay to not say anything if you're unsure, in most cases the other person will notice and pick up the helm.
+It generally doesn't matter which person says \emph{\famword{NaMajara/NaMunara}} first. It's okay to not say anything if you're unsure, in most cases the other person may say it first. It's very common for waitstaff and other service workers to initiate, whereas older generations may expect younger people to say \famword{NaManara} first.
 
-\chapter{Yes, No, I am, Good}
+\chapter{It is, it isn't...}
+
+uru and hwii
+
+
+
+\chapter{Yes, No}
 
 Unlike English, \lang{} doesn't have specific words for "yes" and "no". Surprisingly, it's is not as universal as you'd think! But just because you don't have "yes" and "no" doesn't mean that there's no way to agree or disagree. Instead of saying yes, you simply repeat the verb in the question:
 
 \begin{conversation}
-    \diagline{a}{\famword{QarFi KiiLli?}}{do you drink coffee?}
+    \diagline{a}{\famword{mi QarFi KiiLli?}}{do you drink coffee?}
     \diagline{b}{\famword{KiiL.}}{[Yes,] I drink.}
-    \diagline{b}{\famword{da PurNi NiiMli?}}{but do you eat bread?}
+    \diagline{b}{\famword{mi da PurNi NiiMli?}}{but do you eat bread?}
     \diagline{a}{\famword{NiiM.}}{[Yes,] I eat.}
 \end{conversation}
 
-If you need to disagree with someone's question, you simply use the word \emph{hwii}:
+\newpage
+If you need to disagree with someone's question, you simply use \emph{hwii}:
 
 \begin{conversation}
-    \diagline{a}{\famword{MarHi KiiLli?}}{Do you drink milk?}
-    \diagline{b}{hwii.}{[no,] I don't}
-\end{conversation}
+    \diagline{a}{\famword{mi SeHaNa-FaM FiiMli?}}{Do you speak English?}
+    \diagline{b}{hwii.}{[no,] I don't.}
+\end{conversation} 
 
 In fact, \emph{hwii} is actually a verb that means `to not' or `to not be', and if the polarity of the question is reversed, so must your answers be too. That's because \emph{hwii} is now the main verb that you repeat of you agree. If you want to disagree with a negative question, you repeat the verb right next to \emph{hwii}, but add \emph{da} before it:
 
@@ -261,18 +324,141 @@ In fact, \emph{hwii} is actually a verb that means `to not' or `to not be', and 
 
 As you can also see, the way to make pretty much any statement into a question is to add \emph{-li} to the verb. 
 
+\section*{Review lesson}
+
+\begin{conversation}
+    \diaglinetest{a}{FaSajara, mi SeHana-FaM baj iFaaMli?}
+    \diaglinetest{b}{hwii.}
+    \diaglinetest{a}{mi da DaNa-FaM baj iFaaMli?}
+    \diaglinetest{b}{FiiM. mi SeHaNa hwiili?}
+    \diaglinetest{a}{da uru!}
+\end{conversation}
+
+\noindent Tasks:
+
+\begin{enumerate}
+    \item Translate the conversation above.
+\end{enumerate}
+
 \chapter{What? What's this? This is...}
 
 Now that you know a little bit about questions, it's time you learned how you can make your own, most importantly asking what things are. 
 
 "lis" is the only word you'll need. It's most often used to mean "what", but can also mean "who" or even "where", because the meaning can often be inferred from context.
 
+\begin{conversation}
+    \diagline{a}{\famword{mi lis NiiMli?}}{What are you eating?}
+    \diagline{b}{\famword{nas PurLi NiiM.}}{I'm eating an apple.}
+    \hspace{1.5em}...\\
+    \diagline{a}{\famword{mi lis PLiiS}}{Where are you going?}
+    \diagline{b}{\famword{nas PARIS-iPLuSa PLiiS.}}{I'm going to Paris.}
+    \hspace{1.5em}...\\
+    \diagline{a}{mi lisuruli?}{Who/what are you?}
+    \diagline{b}{\famword{nas BanaBuru.}}{I'm the caretaker.}
+\end{conversation}
+
+\chapter{It's good, it's bad, it's hot, it's cold}
+
+jabauru, bajauru, safrauru, narkauru
+
+\chapter{Pronouns}
+
+nas, mi, miwi
+
+
+
+\chapter{I want, I want to.../I'm going to...}
+
+The word for `to want' in \langeng{} is \emph{kaj.} It's a verb, just like in English, and to say that you want something you simply say the thing followed by `kaj':
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ll}
+        \toprule
+        \famword{KarLi kaj.} & I want water.\\
+        \famword{pars kaj.} & I want that.\\
+        \famword{inNiM kaj.} & I want a snack.\\
+        \famword{NasiM kaj.} & I want chopsticks.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+To say that you want \emph{to do} something, you do the same thing with the verb as with nouns, but add -e\lilglot{} at the end. We'll get back to that suffix and what it entails in a later chapter but for now you just need to know that it's used in this kinda sentence.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ll}
+        \toprule
+        \famword{iSaaJe\lilglot{} kaj.} & I want to go to bed.\\
+        \famword{iNaaMe\lilglot{} kaj.} & I want to eat.\\
+        \famword{aFiMu DiiLe\lilglot{} kaj.} & I want to read a book.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+While \emph{kaj} works just like `want', it also has a second meaning of `to be going to'. It can only be used if it's something you're setting out to do, not if it's just gonna happen to you passively.
+
+\chapter{Numbers}
+
+\chapter{Pronouns continued}
+
+nemi, naswi, nemiwi
+
+\chapter{Where is that?}
+
 \part{Intermediate Grammar}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
 \chapter{Forming words}
 
 The peculiar writing style will seem odd to most, but it is this way for good reason. In many words, certain letters are more important than others as they point to a common overarching meaning, called the \emph{root}, and it's important that these letters stand out for readability.
 
 In the words \famword{KarLi} \textit{`water'}, \famword{KaLa} \textit{`wet'}, \famword{iKaaL} \textit{`it's raining'}, and \famword{aKiLu} \textit{`bottle'}, the letters \textsc{k} and \textsc{l} are part of the root \emph{K-L}, which doesn't have a meaning of its own, but clearly ties together all these words related to water in some way. All of these words are comprised of two root consonants and a template called a \emph{pattern} that these consonants slot into. 
+
+\chapter{Topic, word order, inversion}
+
+When making a sentence in any language, you must explain in some way or another what role each word has, things like "this one performs the action", "this one receives the action" and so forth. In many languages this is done by marking each word explicitly with prepositions, postpositions, suffixes, or some other morpheme, but many other languages, English included, use the order in which the words are said, for example "the kid licked the popsicle" vs. "the popsicle licked a kid". 
+
+in \lang{}, this is even more strict as words can only be said in a very rigid order, and one word is always assumed to be the agent, and subsequent words the patient and so on. This ordering is based upon a ranking called an \emph{animacy hierarchy,} and it makes sentences work a little differently from what you're used to.
+
+PUT HIERARCHY EXPLANATION HERE
+
+\pex
+\a
+\begingl
+\glpreamble
+\famword{BuRKu PurLi NiiM.}
+\endpreamble
+\famword{BuRKu}[dog]
+\famword{PurLi}[apple]
+\famword{NiiM}[eat]
+\glft `The dog eats an apple.'
+\endgl
+\a
+\begingl
+\glpreamble
+\famword{PurLi BuRKu NiiM.}
+\endpreamble
+\famword{PurLi}[apple]
+\famword{BuRKu}[dog]
+\famword{NiiM}[eat]
+\glft `The apple was eaten by a dog.'
+\endgl
+\xe
+
+But what's this? If words have to be in a specific order, why can they switch places like that? The reason is that the first word is also what's called the \emph{topic}, telling the listener or reader that it's what the sentence is centered around. Whatever the person goes on to say, it's going to be in the context of the topic. The same thing happens in both examples above, but from the perspective of the dog and the apple, respectively.
+Other words, regardless of their place in the hierarchy, can jump in front to become the topic; this is called \emph{topicalization}. Only one word may be topicalized at once, so any other words will have to stay where they are.
+
+QUOTE I SCARED MY BROTHER
+
+What if you wanna say "the movie scared me"? Because "the movie" is lower on the hierarchy than "I/me", whenever you form a sentence with the two, "I/me" is automatically the agent. Well, you can still totally do it, but you gotta mark it on the verb to let the reader or listener know. This suffix, \emph{-ibi,} is called the "inverse marker" because it tells the other person that the relationship between the words is opposite/inverse of what they assume normally. Thus, we can go from
+
+QUOTE I SCARED THE MOVIE
+
+to 
+
+QUOTE THE MOVIE SCARED ME
+
+without a hitch!
 
 \end{document}
