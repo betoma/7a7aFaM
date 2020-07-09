@@ -14,21 +14,33 @@
 \usepackage{textcomp}
 \usepackage{expex}
 \usepackage{enumitem}
+\usepackage{paracol}
 \usepackage[calc,english]{datetime2}
 \usepackage{suffix}
 \usepackage{afterpage}
 \usepackage{phonrule}
+\usepackage{xeCJK}
 
 %-----CONFIGURATION------
 %------------------------
 
 \setmainfont{Charis SIL}
+\setCJKmainfont[BoldFont=NotoSansCJKjp-Bold,AutoFakeSlant=0.15]{Noto Sans CJK JP}
+\setCJKsansfont[BoldFont=NotoSansCJKjp-Bold,AutoFakeSlant=0.15]{Noto Sans CJK JP}
 \restylefloat{table}
 
 \setsecnumdepth{subsubsection}
 \settocdepth{subsubsection}
 
-\lingset{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex,everyglft=\it}
+\definelingstyle{default}{glstyle=nlevel,numoffset=3em,textoffset=1.5em,exskip=.75ex,belowglpreambleskip=.25ex,aboveglftskip=.25ex,everyglft=\it}
+\definelingstyle{Conversation}{aboveexskip=0pt,belowexskip=0pt,belowglpreambleskip=.5ex,aboveglftskip=0pt,glwordalign=left,glftpos=right,glhangstyle=none,
+glrightskip=0pt plus .3\hsize,% added to avoid overfull glosses
+glneveryline={\it\addfontfeatures{Letters=UppercaseSmallCaps}},%
+ssratio=.5,% width of the left panel of the glwidth
+everyglft={},%
+}
+
+\lingset{lingstyle=default}
 
 \DTMnewdatestyle{eurodate}{%
     \renewcommand{\DTMdisplaydate}[4]{%
@@ -103,15 +115,18 @@
     \begin{description}[leftmargin=*]
 }%
 
+\makeatletter
 \newenvironment{dictentry}[2]%
     {%
     \item[\famword{#1}] $\bullet$ \textit{#2}\hfill
+    \protected@edef\@currentlabelname{#1}%
     \setcounter{definition}{0}%
     \refstepcounter{dictwordcount}%
     \begin{description}[align=right,labelwidth=*,font=\normalfont]
     }{%
     \end{description}
     }%
+\makeatother
 
 \newcommand{\dictdef}[1]{\refstepcounter{definition}%
 \item[\thedefinition.] #1
@@ -325,6 +340,12 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
         hot \emph{(cf. \famword{SaFR}`heat')}
     }
     \wtf{
+        {u}\rootpart{i}\rootpart{i} & %
+        Experiential & 
+        \famword{uNiMi} & 
+        hungry \emph{(cf. \famword{NaMa} `satisfying')}
+    }
+    \wtf{
         {\rootpart}{ana}{\rootpart}{} & %
         Person of X & %
         \famword{KanaJ}& %
@@ -359,6 +380,12 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
         Diminutive & %
         \famword{inFiM} & %
         word \textit{(cf. \famword{FaM} `language')}
+    }
+    \wtf{
+        \rootpart{u}\rootpart{i} & %
+        Color/Visual Impression & %
+        \famword{KuWi} & %
+        green \emph{(cf., \famword{KajuWa} `leaf')}
     }
     \wtf{
         {\rootpart}uli{\rootpart} & %
@@ -401,18 +428,6 @@ Primary derivation refers to the non-concatenative morphology of stems. These op
         Open/unnatural container & %
         \famword{QimiFu} & %
         coffee mug \emph{(cf. \famword{aQiFu} `coffee pot')}
-    }
-    \wtf{
-        \rootpart{u}\rootpart{i} & %
-        Color & %
-        \famword{KuWi} & %
-        green \emph{(cf., \famword{KajuWa} `leaf')}
-    }
-    \wtf{
-        {u}\rootpart{i}\rootpart{i} & %
-        Experiential & 
-        \famword{uNiMi} & 
-        hungry \emph{(cf. \famword{NaMa} `satisfying')}
     }
     \wtf{
         {\rootpart$_1$}a{\rootpart$_2$}jala{\rootpart$_2$} &
@@ -1141,11 +1156,11 @@ pars \textsc{Karl} baj \famwordold{i}{m}{aa}{h}{}\\
 
 \part{Dictionary}
 
-\include{dictionary}
+\include{dictionary/dictionary}
 
 \part{Example Texts \& Translations}
 
-\setsecnumdepth{subsubsection}
-\settocdepth{subsubsection}
+\include{examples/example_texts}
+
 
 \end{document}
